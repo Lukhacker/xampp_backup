@@ -1,0 +1,445 @@
+/*HERO*/
+.hero {
+    width: 100%;
+    height: auto;
+}
+
+.hero-container {
+    width: 100%;
+    height: 85vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-image: url(../img/inicio/hero.jpg);
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+}
+
+.hero-text {
+    width: 80%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+    gap: 2rem;
+}
+
+.hero-text h1 {
+    font-size: clamp(2.5rem, 2.167rem + 1.111vw, 3.5rem);
+    font-family: LemonLight, sans-serif;
+    color: var(--white);
+    text-align: center;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
+
+    animation: slide-up 1s ease-out forwards;
+    opacity: 0;
+    transform: translateX(-100%);
+}
+
+@keyframes slide-up {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/*HERO BUTTONS*/
+
+.hero-buttons {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row nowrap;
+    gap: 3rem;
+}
+
+.hero-button {
+    position: relative;
+    background: none;
+    border: 3px solid var(--white);
+    padding: .5rem 1rem;
+    margin-top: 1rem;
+
+    font-size: clamp(1.3rem, 1.233rem + 0.222vw, 1.5rem);
+    color: var(--white);
+    font-family: LemonRegular, sans-serif;
+
+    cursor: pointer;
+    outline: none;
+    overflow: hidden;
+    z-index: 99; 
+
+    animation: slide-up 1s ease-out forwards;
+    opacity: 0;
+    transform: translateX(-100%);
+    animation-delay: 0.6s; 
+}
+
+.hero-button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background-color: var(--white);
+    transition: width 0.5s ease;
+    z-index: 9; 
+    left: 0;
+}
+
+.hero-button:hover::after {
+    width: 100%;
+}
+
+.hero-button a{
+    color: var(--white);
+    text-decoration: none;
+    position: relative;
+    z-index: 999;
+
+    background: linear-gradient(to left, var(--white) 50%, var(--black) 50%);
+    background-size: 200% 100%;
+    background-position: 100% 0%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    /*Hago una transición suave del gradiente*/
+    transition: background-position 0.5s ease;
+}
+
+.hero-button:hover a {
+    background-position: 0% 0%;
+}
+
+/*NOTICIAS*/
+
+.news {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+    margin-top: 2rem;
+}
+
+.news-container {
+    width: 90%;
+    height: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-flow: column nowrap;
+}
+
+.news-item a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.news-row {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: stretch;
+    align-items: stretch;
+    gap: 2rem;
+}
+
+.news-item {
+    flex: 1;
+    height: auto;
+    display: flex;
+    justify-content: stretch;
+    align-items: stretch;
+    flex-flow: row nowrap;
+    margin-bottom: 2rem;
+}
+
+.news-item h2,
+.news-item p {
+    color: var(--black);
+    transition: color 0.4s ease-in-out;
+}
+
+.news-link {
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row nowrap;
+    background: var(--white);
+    border-radius: 10px;
+    text-decoration: none;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+}
+
+.news-link::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: var(--scroll-grey);
+    transition: width 0.4s ease-in-out;
+    z-index: 0;
+}
+
+.news-link:hover {
+    transform: scale(1.05);
+}
+
+.news-link:hover::before {
+    width: 100%;
+}
+
+.news-link:hover h2,
+.news-link:hover p {
+    color: var(--white);
+}
+
+.news-link * {
+    position: relative;
+    z-index: 1;
+}
+
+
+
+.news-image {
+    flex: 1;
+    height: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+}
+
+.post-thumbnail {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4/5;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.news-text {
+    flex: 2;
+    padding: 1rem;
+
+    h2 {
+        margin-bottom: 1rem;
+    }
+}
+
+/*INTRO*/
+
+.intro {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+    margin-top: 0rem;
+}
+
+.intro-container {
+    width: 90%;
+    height: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-flow: column nowrap;
+}
+
+.intro-row {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row nowrap;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+
+    .intro-text {
+        flex: 9;
+        height: auto;
+
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+}
+
+.intro-img {
+    flex: 11;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/8;
+    border-radius: 5px;
+
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.intro-img1 {
+    background-image: url(../img/inicio/intro1.jpg);
+}
+
+.intro-img2 {
+    background-image: url(../img/inicio/intro2.JPG);
+}
+
+/*VISITAR LA ZUBIA*/
+
+.visitar {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+    margin-bottom: 2rem;
+}
+
+.visitar-container {
+    width: 90%;
+    height: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-flow: column nowrap;
+}
+
+.visitar-items {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    justify-content: stretch;
+    align-items: stretch;
+    flex-flow: row nowrap;
+    gap: 2rem;
+
+}
+
+.visitar-link {
+    text-decoration: none;
+    flex: 1;
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    justify-content: stretch;
+    align-items: stretch;
+    flex-flow: column nowrap;
+
+    background: var(--white);
+
+    transition: transform 0.3s ease;
+    text-decoration: none;
+    color: inherit;
+}
+
+.visitar-link:hover {
+    transform: scale(1.05);
+}
+
+.visitar-text h2 {
+    position: relative;
+    margin-bottom: 10px;
+}
+.visitar-text h2::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: black;
+    border-radius: 50px;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+/*Al hacer hover sobre el enlace, se anima la línea de izquierda a derecha*/
+.visitar-link:hover .visitar-text h2::after {
+    transform: scaleX(1);
+}
+
+.visitar-item {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-flow: column nowrap;
+
+    .visitar-text {
+        display: flex;
+        flex-flow: column nowrap;
+        padding: 1rem;
+        gap: 1rem;
+
+        p, h2 {
+            color: var(--black);
+        }
+    }
+}
+
+.visitar-img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.visitar-img1 {
+    background-image: url(../img/inicio/visitar1.jpeg);
+}
+
+.visitar-img2 {
+    background-image: url(../img/inicio/visitar2.jpg);
+}
+
+.visitar-img3 {
+    background-image: url(../img/inicio/visitar3.jpeg);
+}
+

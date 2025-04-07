@@ -1,0 +1,89 @@
+.search {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-flow: column nowrap;
+    margin-top: 2rem;
+}
+
+.search-container {
+    width: 90%;
+    height: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-flow: column nowrap;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.search-title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid var(--white);
+    padding-bottom: 0.5rem;
+}
+
+/* Estilos para los resultados de búsqueda */
+.search-result {
+    display: block;
+    width: 100%;
+    background-color: var(--white);
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin: 1rem 0;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.search-result::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: var(--scroll-grey);
+    transition: width 0.4s ease-in-out;
+    z-index: 0;
+}
+
+.search-result:hover::before {
+    width: 100%;
+}
+
+.search-result-content {
+    position: relative;
+    z-index: 1;
+}
+
+.search-result h2 {
+    margin: 0 0 0.5rem;
+    font-size: clamp(1.3rem, 1.1333rem + 0.5556vw, 1.8rem);
+}
+
+.search-result p {
+    line-height: 1.5;
+    margin-bottom: 0;
+}
+
+/*Transición de color en el título y párrafo*/
+.search-result h2,
+.search-result p {
+    color: var(--black);
+    transition: color 0.3s ease-in-out;
+}
+
+/*Cambio de color en hover*/
+.search-result:hover h2,
+.search-result:hover p {
+    color: var(--white);
+}

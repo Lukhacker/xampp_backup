@@ -1,0 +1,489 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Colores y variables*/
+:root {
+    --white: #fff;
+    --black: rgb(0, 0, 0);
+    --light-grey: #eaeaea;
+    --scroll-grey: #646464;
+    --dark-grey: #333;
+    --box-shadow-color: rgba(0, 0, 0, 0.2); 
+    --red: rgb(255, 50, 50);
+    --yellow: #ffd736;
+    --green: rgb(37, 139, 37);
+    --dark-yellow: #ad8b00;
+    --dark-red: rgb(152, 0, 0);
+    --dark-green: rgb(0, 79, 0);
+    --blue: rgb(198, 198, 255);
+    --orange: rgb(255, 187, 62);
+    --purple: rgb(199, 86, 199);
+    --dark-blue: rgb(66, 66, 142);
+    --dark-orange: rgb(196, 98, 0);
+    --dark-purple: rgb(128, 0, 128);
+
+    --background: rgb(35, 35, 35);
+}
+
+html, body {
+    width: 100%;
+    height: auto;
+    scroll-behavior: smooth;
+    background: var(--background);
+}
+
+.container {
+    width: 100%;
+    height: auto;
+}
+
+@font-face {
+    font-family: "LemonBold";
+    src: url(../fonts/LEMONMILK-Bold.otf) format("truetype"),
+         url(../fonts/LEMONMILK-Bold.woff2) format("woff2"),
+         url(../fonts/LEMONMILK-Bold.woff) format("woff"),
+}
+
+@font-face {
+    font-family: "LemonRegular";
+    src: url(../fonts/LEMONMILK-Regular.otf) format("truetype"),
+         url(../fonts/LEMONMILK-Regular.woff2) format("woff2"),
+         url(../fonts/LEMONMILK-Regular.woff) format("woff"),
+}
+
+@font-face {
+    font-family: "LemonLight";
+    src: url(../fonts/LEMONMILK-Light.otf) format("truetype"),
+         url(../fonts/LEMONMILK-Light.woff2) format("woff2"),
+         url(../fonts/LEMONMILK-Light.woff) format("woff"),
+}
+
+@font-face {
+    font-family: "NouvelRegular";
+    src: url(../fonts/NouvelRRegular.ttf) format("truetype"),
+         url(../fonts/NouvelRRegular.woff2) format("woff2"),
+         url(../fonts/NouvelRRegular.woff) format("woff"),
+}
+
+@font-face {
+    font-family: "NouvelBold";
+    src: url(../fonts/NouvelRBold.ttf) format("truetype"),
+         url(../fonts/NouvelRBold.woff2) format("woff2"),
+         url(../fonts/NouvelRBold.woff) format("woff"),
+}
+
+/*Parrafos y titulos*/
+
+p {
+    font-family: Montserrat, Calibri;
+    text-align: justify;
+    word-spacing: .2rem;
+    color: var(--white);
+    font-size: clamp(1rem, 0.933rem + 0.222vw, 1.2rem);
+}
+
+h1 {
+    font-family: LemonLight, sans-serif;
+    font-size: clamp(2rem, 1.667rem + 1.111vw, 3rem);
+    color: var(--white);
+    text-align: left;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-family: NouvelBold, sans-serif;
+    font-size: clamp(1.5rem, 1.333rem + 0.556vw, 2rem);
+    color: var(--white);
+    text-align: left;
+}
+
+h3 {
+    font-family: NouvelRegular, sans-serif;
+    font-size: clamp(1.2rem, 1rem + 0.667vw, 1.8rem);
+    font-weight: 100;
+    color: var(--white);
+    text-align: left;
+}
+
+/*MENÚ DE HAMBURGUESA*/
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.bar {
+    height: 3px;
+    width: 25px;
+    background-color: var(--white);
+    margin: 3px 0;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.logo-secreto {
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: row nowrap;
+
+    display: none;
+}
+
+.logo-secreto img {
+    width: auto;
+    height: 100px;
+    padding: .8rem;
+}
+
+/*NAV*/
+
+header {
+    width: 100%;
+    height: 15vh;
+    display: flex; 
+    position: relative;
+    z-index: 1000;
+    justify-content: center;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+header.hidden {
+    transform: translateY(-100%);
+    opacity: 0;
+}
+
+.main-nav {
+    width: 100%;
+    height: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row nowrap;
+
+    color: var(--white);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, .6);
+
+    background-color: var(--black);
+}
+
+.list-nav {
+    width: 100%;
+    list-style-type: none;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    margin: 0;
+    padding: 0;
+
+}
+
+.nav-left,
+.nav-right {
+    flex: 1;
+}
+
+.nav-left ul,
+.nav-right ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 1rem;
+
+}
+
+.nav-left ul {
+    justify-content: flex-end;
+}
+
+.nav-right ul {
+    justify-content: flex-end;
+}
+
+.list-nav li {
+    margin: 0 1rem;
+    display: inline;
+}
+
+.nav-left form {
+    display: flex;
+    align-items: center;
+    flex-grow: 0; 
+}
+
+/*Hago transición de la línea del menú*/
+.list-nav li a {
+    position: relative;
+    color: var(--white);
+    text-decoration: none;
+}
+
+.list-nav li a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: var(--white);
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+}
+
+.list-nav li a:hover::after {
+    width: 100%;
+}
+
+
+.logo {
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: row nowrap;
+}
+
+.logo img {
+    width: auto;
+    height: 100px;
+    padding: .8rem;
+}
+
+.nav-section {
+    font-family: NouvelRegular, sans-serif;
+    font-size: clamp(1.1rem, 1.033rem + 0.222vw, 1.3rem);
+}
+
+/*Botón de volver al inicio*/
+.scroll-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 3rem;
+    height: 3rem;
+
+    border: none;
+    border-radius: 50%;
+    background-color: var(--black);
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+    line-height: 3rem;
+    text-decoration: none; 
+
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, opacity 0.3s ease, background-color 0.3s ease;
+    z-index: 1000;
+}
+
+.scroll-to-top:hover {
+    background-color: var(--white);
+    i {
+        color: var(--black);
+    }
+}
+
+/*BUSCADOR*/
+.search-form {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--white);
+    border-radius: 5px;
+    overflow: hidden;
+    max-width: 300px;
+}
+
+.secret-search-form {
+    visibility: hidden;
+    display: none;
+}
+
+.search-form input {
+    flex: 1;
+    border: none;
+    padding: 8px;
+    outline: none;
+}
+
+.search-form button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.search-form button i {
+    font-size: 16px;
+    color: var(--white); 
+    transition: color 0.3s ease-in-out;
+}
+
+.search-form button:hover {
+    background-color: var(--white);
+}
+
+.search-form button:hover i {
+    color: var(--black);
+}
+
+.white-line {
+    width: 100%;
+    height: 2px;
+    background-color: var(--white);
+    border-radius: 20px;
+    margin-bottom: 3rem;
+    display: flex;
+    align-self: flex-start;
+}
+
+/*Black button*/
+
+.black-button {
+    background-color: var(--black);
+    color: var(--white);
+    border: 2px solid var(--black);
+    padding: 1rem 2rem;
+    margin-top: 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.black-button a {
+    text-decoration: none;
+    color: inherit;
+    display: inline-flex;
+    align-items: center;
+    font-size: clamp(1rem, 0.933rem + 0.222vw, 1.2rem);
+    font-family: Montserrat, sans-serif;
+    font-weight: 600;
+    gap: 0.5rem;
+}
+
+.black-button i {
+    transition: color 0.3s ease;
+}
+
+.black-button:hover {
+    background-color: var(--white);
+    color: var(--black);
+}
+
+.black-button:hover a {
+    color: var(--black);
+}
+
+.black-button:hover i {
+    color: var(--black);
+}
+
+@media (max-width: 990px) {
+    /*BURGER*/
+    .hamburger {
+        display: flex;
+        z-index: 9999;
+        cursor: pointer;
+    }
+    
+    .list-nav {
+        opacity: 0;
+        visibility: hidden; 
+        position: fixed;
+    
+        width: 100%; 
+        height: 60vh; 
+        top: 0;
+        right: 0;
+        
+        background-color: var(--black);
+        
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    
+        z-index: 999;
+        transform: translateY(-100%);
+        transition: none; 
+    }
+
+    .secret-search-form {
+        visibility: visible;
+        display: flex;
+        width: 100%;
+    }
+    
+    /*Transiciones aplicadas solo cuando está inicializado*/
+    .menu-initialized {
+        transition: transform 0.3s ease, opacity 0.3s ease, visibility 0s 0s; 
+    }
+    
+    /*Cuando está activado el menú*/
+    .menu-toggle:checked ~ .list-nav {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    .nav-left, .nav-right {
+        flex: 0;
+    }
+
+    .nav-left ul, .nav-right ul {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        gap: 0;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .logo-secreto {
+        display: flex;
+    }
+    
+    .list-nav li {
+        margin: 15px 0;
+    }
+    
+    .list-nav a {
+        color: var(--white);
+        font-size: 24px;
+        text-decoration: none;
+    }
+
+    /*Configuración para convertir el menú de hamburguesa en una X al activarse*/
+    .hamburger .bar {
+        transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .menu-toggle:checked + .hamburger .bar:nth-child(1) {
+        transform: rotate(45deg) translate(7.5px, 7.5px);
+    }
+    
+    .menu-toggle:checked + .hamburger .bar:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .menu-toggle:checked + .hamburger .bar:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+}

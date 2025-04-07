@@ -1,0 +1,266 @@
+/*FOOTER*/
+
+footer {
+    width: 100%;
+    height: auto;
+    margin-top: 4rem;
+
+    background: var(--dark-grey);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-container {
+    width: 70%;
+    height: auto;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+}
+
+.footer-circle {
+    width: 100px;
+    height: 100px;
+    padding: .5rem;
+    margin-top: -2.7rem;
+
+    border-radius: 10%;
+    position: relative;
+    background-color: white;
+
+    background: var(--dark-grey);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        width: 100px;
+        padding: .5rem;
+        height: auto;
+    }
+}
+
+.footer-row1 {
+    width: 100%;
+    height: auto;
+    padding: 2rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row nowrap;
+
+    gap: 3rem;
+}
+
+.footer-column1 {
+    flex: 1;
+    height: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-flow: column nowrap;
+
+    h2 {
+        text-align: right;
+    }
+}
+
+.footer-column2 {
+    flex: 1;
+    height: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-flow: column nowrap;
+}
+
+.footer-column1 p {
+    text-align-last: right;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.tour-cta {
+    position: relative;
+    background: none;
+    border: 3px solid var(--white);
+    border-radius: 10px;
+    padding: .5rem 1rem;
+    margin-top: 1rem;
+
+    font-size: clamp(1rem, 0.933rem + 0.222vw, 1.2rem);
+    color: var(--white);
+    font-family: Montserrat, sans-serif;
+
+    cursor: pointer;
+    outline: none;
+    overflow: hidden;
+    z-index: 99; 
+}
+
+.tour-cta::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 100%;
+    background-color: var(--white);
+    transition: width 0.5s ease;
+    z-index: 9; 
+}
+
+.tour-cta:hover::after {
+    width: 100%;
+}
+
+.tour-cta a {
+    color: var(--white);
+    text-decoration: none;
+    position: relative;
+    z-index: 999;
+
+    background: linear-gradient(to right, var(--white) 50%, var(--black) 50%);
+    background-size: 200% 100%;
+    background-position: 0% 0%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    transition: background-position 0.5s ease;
+}
+
+.tour-cta:hover a {
+    background-position: 100% 0%;
+}
+
+.footer-column2 p {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+/*Social media styles*/
+
+.social-media {
+    list-style: none;
+    padding: 0;
+}
+
+.social-media li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.social-media i {
+    margin-right: .5rem;
+    color: var(--white);
+}
+
+.social-media a {
+    font-family: Montserrat, sans-serif;
+    text-decoration: none;
+    position: relative;
+    color: var(--white);
+}
+
+.copyright {
+    padding: 2rem;
+    text-align: center;
+}
+
+/*Le doy una transición a las redes sociales*/
+  
+.social-media li a::after {
+    content: "";
+    position: absolute;
+    bottom: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 1px; 
+    background-color: var(--white); 
+    transform: scaleX(0); 
+    transform-origin: right; 
+    transition: transform 0.5s ease; 
+}
+  
+.social-media a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left; 
+}
+
+/*LINES*/
+
+.white-vertical-line {
+    width: 3px;
+    height: 40vh;
+    background-color: var(--white);
+    border-radius: 20px;
+
+    align-self: center;
+}
+
+.secret-white-horizontal-line {
+    display: none;
+    width: 40vw;
+    height: 3px;
+    background-color: var(--white);
+    border-radius: 20px;
+
+    align-self: center;
+}
+
+.white-horizontal-line {
+    width: 40vw;
+    height: 3px;
+    background-color: var(--white);
+    border-radius: 20px;
+
+    align-self: center;
+}
+
+@media (max-width: 900px) {
+    .footer-row1 {
+        flex-direction: column;
+    }
+    .white-vertical-line {
+        display: none;
+    }
+    .secret-white-horizontal-line {
+        display: block;
+    }
+
+    .footer-logo {
+        justify-content: center;
+    }
+
+    .footer-column1, .footer-column2 {
+        align-items: center;
+
+        h2 {
+            text-align: center;
+        }
+    }
+
+    .footer-column1 p {
+        text-align-last: left;
+    }
+
+    .footer-column2 {
+        align-items: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .footer-container {
+        width: 90%;
+    }
+}

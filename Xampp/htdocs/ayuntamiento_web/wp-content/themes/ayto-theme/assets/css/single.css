@@ -1,0 +1,51 @@
+.post {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+    margin-top: 1rem;
+
+    h1 {
+        text-align: center;
+    }
+}
+
+.post-container {
+    width: 60%;
+    height: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-flow: column nowrap;
+}
+
+.post-meta {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    color: var(--white);
+    font-family: NouvelBold, sans-serif;
+    font-size: clamp(1.5rem, 1.333rem + 0.556vw, 2rem);
+    text-align: center;
+}
+
+/*IMAGEN DE LA ENTRADA*/
+
+.post-thumbnail {
+    width: auto;
+    height: auto;
+    aspect-ratio: 16/9;
+    max-height: 500px;
+
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    margin-bottom: 2rem;
+}
+
+.post-body {
+    margin-bottom: 2rem;
+}
