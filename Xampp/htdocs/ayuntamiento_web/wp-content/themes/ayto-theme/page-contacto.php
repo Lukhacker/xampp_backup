@@ -36,13 +36,13 @@ get_header();
                 </div>
                 <div class="info-text info-text2">
                     <h2>Ayuntamiento</h2>
-                        <a href="https://www.facebook.com/ayuntamientodelazubia/?locale=es_ES">@ayuntamientodelazubia</a>
+                        <a href="https://www.facebook.com/ayuntamientodelazubia/?locale=es_ES" target="_blank">@ayuntamientodelazubia</a>
                     <h2>Deportes</h2>
-                    <a href="https://www.facebook.com/deporteslazubia?locale=es_ES">@deporteslazubia</a>
+                    <a href="https://www.facebook.com/deporteslazubia?locale=es_ES" target="_blank">@deporteslazubia</a>
                     <h2>Cultura</h2>
-                        <a href="https://www.facebook.com/culturalazubia?locale=es_ES">@culturalazubia</a>
+                        <a href="https://www.facebook.com/culturalazubia?locale=es_ES" target="_blank">@culturalazubia</a>
                     <h2>Turismo</h2>
-                    <a href="https://www.facebook.com/turismo.aytolazubia?locale=es_ES">@turismolazubia</a>
+                    <a href="https://www.facebook.com/turismo.aytolazubia?locale=es_ES" target="_blank">@turismolazubia</a>
                 </div>
             </div>
 
@@ -122,10 +122,14 @@ get_header();
     </div>
 </section>
 
-<div class="formulario">
-    <div class="formulario-container">
-        <h1>Cóntactanos si tienes una duda</h1>
+<section class="formulario">
+    <div class="formulario-title">
+        <h1>Contáctanos por correo</h1>
         <span class="white-line"></span>
+    </div>
+    <div class="formulario-container">
+        <h1>¿Tienes alguna duda?</h1>
+        <span class="contact-line"></span>
 
         <!--Muestro el mensaje de éxito o error-->
         <div id="responseMessage"></div>
@@ -141,19 +145,19 @@ get_header();
                 </select>
 
                 <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" required>
+                <input type="text" class="contact-input" id="nombre" name="nombre" required>
 
                 <label for="email">Correo electrónico:</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" class="contact-input" id="email" name="email" required>
 
                 <label for="mensaje">Mensaje:</label>
-                <textarea id="mensaje" name="mensaje" required></textarea>
+                <textarea id="mensaje" class="contact-input" name="mensaje" required></textarea>
 
-                <button type="submit">Enviar</button>
+                <button type="submit" class="contact-button">Enviar</button>
             </form>
-
+        </div>
     </div>
-</div>
+</section>
 
 <?php
 get_footer();

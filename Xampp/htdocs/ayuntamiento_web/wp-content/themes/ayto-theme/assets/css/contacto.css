@@ -173,7 +173,6 @@
     justify-content: center;
     align-items: center;
     flex-flow: column nowrap;
-    margin-top: 2rem;
 }
 
 .instalaciones-container {
@@ -251,21 +250,114 @@
 .formulario {
     width: 100%;
     height: auto;
-
     display: flex;
     justify-content: center;
     align-items: center;
     flex-flow: column nowrap;
-    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
 .formulario-container {
     width: 90%;
-    height: auto;
-
+    max-width: 600px;
+    padding: 2rem;
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     flex-flow: column nowrap;
+
+    h1 {
+        color: var(--black);
+        text-align: center;
+        font-size: clamp(1.5rem, 1.333rem + 0.556vw, 2rem);
+        margin-bottom: 1.5rem;
+    }
 }
 
+.formulario-title {
+    width: 90%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    justify-content: center;
+    align-self: center;
+}
+
+.contact-line {
+    width: 50px;
+    height: 3px;
+    background-color: var(--black);
+    align-self: center;
+    margin-bottom: 1.5rem;
+}
+
+#contact-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    font-family: Montserrat, Calibri;
+    text-align: justify;
+    word-spacing: .2rem;
+    color: var(--black);
+    font-size: clamp(1rem, 0.933rem + 0.222vw, 1.2rem);
+}
+
+.contact-input, select, textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--scroll-grey);
+    border-radius: 4px;
+    font-size: clamp(1rem, 0.933rem + 0.222vw, 1.2rem);
+}
+
+.contact-button {
+    padding: 0.8rem;
+    background-color: var(--black);
+    color: var(--white);
+    border: none;
+    border-radius: 4px;
+    font-size: clamp(1rem, 0.933rem + 0.222vw, 1.2rem);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-button:hover {
+    background-color: var(--dark-grey);
+}
+
+#responseMessage {
+    display: none;
+    padding: 1.5rem;
+    text-align: center;
+    font-size: clamp(1rem, 0.933rem + 0.222vw, 1.2rem);
+    color: var(--black);
+    border-radius: 10px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+#responseMessage.success {
+    display: block;
+    background-color: #d4edda;
+    color: #155724;
+}
+
+#responseMessage.error {
+    display: block;
+    background-color: #f8d7da;
+    color: #721c24;
+}

@@ -102,7 +102,7 @@ get_header();
         <h1>¿Por qué visitar La Zubia?</h1>
         <div class="white-line"></div>
         <div class="visitar-items">
-            <a class="visitar-link" href="https://turismo.lazubia.org/que-hacer/?tour_types=44&page=0">
+            <a class="visitar-link" href="https://turismo.lazubia.org/que-hacer/?tour_types=44&page=0" target="_blank">
                 <div class="visitar-item visitar-item1">
                     <div class="visitar-img visitar-img1"></div>
                     <div class="visitar-text">
@@ -114,7 +114,7 @@ get_header();
                 </div>
             </a>
             
-            <a class="visitar-link" href="https://turismo.lazubia.org/que-hacer/?tour_types=33&page=0">
+            <a class="visitar-link" href="https://turismo.lazubia.org/que-hacer/?tour_types=33&page=0" target="_blank">
                 <div class="visitar-item visitar-item2">
                     <div class="visitar-img visitar-img2"></div>
                     <div class="visitar-text">
@@ -126,7 +126,7 @@ get_header();
                 </div>
             </a>
 
-            <a class="visitar-link" href="https://turismo.lazubia.org/que-hacer/?tour_types=59&page=0">
+            <a class="visitar-link" href="https://turismo.lazubia.org/que-hacer/?tour_types=59&page=0" target="_blank">
                 <div class="visitar-item visitar-item3">
                     <div class="visitar-img visitar-img3"></div>
                     <div class="visitar-text">
