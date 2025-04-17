@@ -1,34 +1,41 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const calendar = document.getElementById("calendar");
-    const eventInfo = document.getElementById("event-info");
-  
-    if (!calendar || !eventosData) return;
-  
-    const today = new Date();
-    const year = today.getFullYear();
-    const month = today.getMonth();
-    const daysInMonth = new Date(year, month + 1, 0).getDate();
-  
-    for (let day = 1; day <= daysInMonth; day++) {
-      const dateStr = `${year}-${String(month + 1).padStart(2, "0")}-${String(day).padStart(2, "0")}`;
-      const dayDiv = document.createElement("div");
-      dayDiv.classList.add("calendar-day");
-      dayDiv.textContent = day;
-  
-      if (eventosData[dateStr]) {
-        dayDiv.classList.add("event");
-  
-        dayDiv.addEventListener("click", () => {
-          const evento = eventosData[dateStr][0];
-          eventInfo.innerHTML = `
-            <img src="${evento.image}" alt="${evento.title}">
-            <h3>${evento.title}</h3>
-            <p>${evento.excerpt}</p>
-            <a href="${evento.url}" class="btn-mas-info">Más info &gt;</a>
-          `;
-        });
-      }
-  
-      calendar.appendChild(dayDiv);
-    }
-});  
+    const eventosDiv = document.getElementById("eventos-del-dia");
+
+    // Delegación de eventos: escucha clicks en el calendario
+    document.querySelector(".eo-widget-cal-wrap").addEventListener("click", function (e) {
+        const target = e.target;
+
+        // Si el clic fue en un enlace con evento
+        if (target.tagName === "A" && target.closest("td")?.classList.contains("eo-event-future")) {
+            e.preventDefault();
+
+            const url = target.getAttribute("href");
+
+            // Limpia la info anterior
+            eventosDiv.innerHTML = "";
+            eventosDiv.classList.remove("mostrar-evento");
+
+            // Fetch al contenido del evento
+            fetch(url)
+                .then((res) => res.text())
+                .then((html) => {
+                    const parser = new DOMParser();
+                    const doc = parser.parseFromString(html, "text/html");
+
+                    // Puedes ajustar este selector según el contenido real
+                    const contenidoEvento = doc.querySelector(".entry-content") || doc.querySelector("article") || doc.body;
+
+                    eventosDiv.innerHTML = contenidoEvento.innerHTML;
+
+                    // Aplica clase para transición
+                    setTimeout(() => {
+                        eventosDiv.classList.add("mostrar-evento");
+                    }, 50);
+                })
+                .catch((error) => {
+                    eventosDiv.innerHTML = "<p>Error al cargar el evento.</p>";
+                    console.error("Error al cargar el evento:", error);
+                });
+        }
+    });
+});

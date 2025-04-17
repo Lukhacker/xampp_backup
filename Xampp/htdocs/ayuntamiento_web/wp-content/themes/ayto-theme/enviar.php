@@ -1,5 +1,5 @@
 <?php
-// Este archivo solo procesará el formulario cuando se reciba una solicitud AJAX
+//Este archivo solo procesará el formulario cuando se reciba una solicitud AJAX
 
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['ajax'])) {
     // Obtener los valores enviados por el formulario

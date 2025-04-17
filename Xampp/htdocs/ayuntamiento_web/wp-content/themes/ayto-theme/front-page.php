@@ -145,9 +145,12 @@ get_header();
     <div class="eventos-container">
         <h1>Eventos y Actividades</h1>
         <span class="white-line"></span>
-        <?php echo do_shortcode('[calendario_eventos]'); ?>
+        <?php echo do_shortcode('[eo_calendar]'); ?>
+        <div id="eventos-del-dia"></div>
     </div>
 </section>
+
+
 
 <?php
 get_footer();
