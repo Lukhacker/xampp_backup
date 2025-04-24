@@ -281,12 +281,13 @@
 .intro-row {
     width: 100%;
     height: auto;
+    border-radius: 10px;
+    background: var(--white);
 
     display: flex;
     justify-content: center;
     align-items: center;
     flex-flow: row nowrap;
-    gap: 1.5rem;
     margin-bottom: 2rem;
 
     .intro-text {
@@ -297,7 +298,11 @@
         flex-flow: column nowrap;
         justify-content: center;
         align-items: flex-start;
-        gap: 1rem;
+
+        p {
+            color: var(--black);
+            padding: 1rem;
+        }
     }
 }
 
@@ -306,7 +311,6 @@
     width: 100%;
     height: auto;
     aspect-ratio: 16/8;
-    border-radius: 5px;
 
     background-size: cover;
     background-position: center center;
@@ -315,10 +319,14 @@
 
 .intro-img1 {
     background-image: url(../img/inicio/intro1.jpg);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 .intro-img2 {
     background-image: url(../img/inicio/intro2.JPG);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
 }
 
 /*VISITAR LA ZUBIA*/
