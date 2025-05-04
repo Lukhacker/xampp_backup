@@ -150,7 +150,12 @@ get_header();
     </div>
 </section>
 
-
+<section class="galeria">
+    <div class="galeria-container">
+        <h1>Galería</h1>
+        <span class="white-line"></span>
+    </div>
+</section>
 
 <?php
 get_footer();

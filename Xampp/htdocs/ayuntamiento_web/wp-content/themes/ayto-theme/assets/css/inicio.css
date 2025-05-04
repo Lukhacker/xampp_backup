@@ -310,7 +310,7 @@
     flex: 11;
     width: 100%;
     height: auto;
-    aspect-ratio: 16/8;
+    aspect-ratio: 16/9;
 
     background-size: cover;
     background-position: center center;
@@ -359,7 +359,7 @@
     display: flex;
     justify-content: stretch;
     align-items: stretch;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     gap: 2rem;
 
 }
@@ -663,6 +663,98 @@
     text-decoration: underline;
 }
 
+/*GALERÍA*/
+
+.galeria {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+    margin-top: 2rem;
+}
+
+.galeria-container {
+    width: 90%;
+    height: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-flow: column nowrap;
+}
+
+@media (max-width: 1320px) {
+    .intro-img {
+        aspect-ratio: 16/11;
+    }
+}
+
+@media (max-width: 1020px) {
+    .visitar-items {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+
+    .visitar-items > .visitar-link {
+        flex: 0 0 calc((100% - 2rem) / 2);
+        max-width: calc((100% - 2rem) / 2);
+    }
+
+    .visitar-items > .visitar-link:nth-child(3) {
+        order: 1;
+        flex: 0 0 100%;
+        max-width: 50%;
+        margin-top: 2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .visitar-items > .visitar-link:nth-child(3) {
+        max-width: 100%;
+    }
+
+    .visitar-items > .visitar-link {
+        max-width: 100%;
+    }
+    
+    .visitar-items {
+        flex-flow: column nowrap;
+    }
+}
+
+
+
+@media (max-width: 900px) {
+    .intro-img {
+        aspect-ratio: 16/8;
+    }
+    .intro-row1 {
+        flex-flow: column-reverse nowrap !important;
+    }
+    .intro-row2 {
+        flex-flow: column nowrap !important;
+    }
+    .intro-img1, .intro-img2 {
+        border-radius: 0;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+}
   
-  
-  
+@media (max-width: 575px) {
+    .hero-buttons {
+        gap: 1rem;
+    }
+    .hero-button a {
+        i {
+            display: none;
+        }
+    }
+    .hero-text {
+        width: 90%;
+    }
+}

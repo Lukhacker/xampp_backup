@@ -9,6 +9,172 @@ get_header();
     </div>
 </section>
 
+<section class="turismo">
+    <div class="turismo-container">
+        <h1>Turismo</h1>
+        <span class="white-line"></span>
+        <div class="turismo-columns">
+            <div class="turismo-column turismo-column1">
+                <div class="turismo-text">
+                    <h2>Descubre La Zubia: Naturaleza, Patrimonio y Experiencias Únicas</h2>
+                    <p>
+                        La Zubia ofrece un <strong>patrimonio natural</strong> impresionante, donde los visitantes pueden disfrutar de <strong>rutas de senderismo</strong> por la Sierra de Huétor y descubrir <strong>miradores</strong> con vistas panorámicas al valle del Genil. La <strong>oficina de turismo</strong> organiza visitas guiadas a los monumentos históricos del municipio y facilita información sobre <strong>gastronomía local</strong> y <strong>eventos festivos</strong>. Además, el entorno rural cercano permite a los amantes de la naturaleza practicar <strong>avistamiento de aves</strong> y recorrer antiguos caminos agrícolas en bicicleta.
+                    </p>
+                    <button class="black-button"><a href="https://turismo.lazubia.org/" target="_blank">Página de Turismo <i class="fa-solid fa-chevron-right"></i></a></button>
+                </div>
+            </div>
+            <div class="turismo-column turismo-column2">
+                <div class="turismo-collage">
+                    <div class="turismo-img turismo-img1"></div>
+                    <div class="turismo-img turismo-img2"></div>
+                    <div class="turismo-img turismo-img3"></div>
+                    <div class="turismo-img turismo-img4"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="juventud">
+    <div class="juventud-container">
+        <h1>juventud</h1>
+        <span class="white-line"></span>
+        <div class="juventud-columns">
+            <div class="juventud-column juventud-column1">
+                <div class="juventud-collage">
+                    <div class="juventud-img juventud-img1"></div>
+                    <div class="juventud-img juventud-img2"></div>
+                    <div class="juventud-img juventud-img3"></div>
+                </div>
+            </div>
+            <div class="juventud-column juventud-column2">
+                <div class="juventud-text">
+                    <h2>La Zubia Joven: Crea, Conecta, Participa</h2>
+                    <p>
+                        El Área de Juventud de La Zubia ofrece <strong>talleres de pintura</strong>, <strong>torneos de ajedrez</strong> y <strong>mucho más</strong> para fomentar la creatividad y el pensamiento crítico entre los jóvenes. Mediante <strong>dinámicas de grupo</strong>, <strong>retos colaborativos</strong> y <strong>proyectos comunitarios</strong>, animan a los participantes a proponer nuevas ideas y a implicarse activamente en la programación de actividades. Así, los jóvenes de La Zubia no solo disfrutan de formación artística y lúdica, sino que también desarrollan habilidades de <strong>liderazgo</strong> y <strong>trabajo en equipo</strong> mientras hacen valer su voz en el municipio.
+                    </p>
+                    <button class="black-button"><a href="https://lazubiajoven.com/" target="_blank">Blog de Juventud <i class="fa-solid fa-chevron-right"></i></a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="servicios">
+  <div class="servicios-container">
+    <h1>Servicios</h1>
+    <span class="white-line"></span>
+
+    <div class="slider-js">
+        <button class="slider-btn prev"><i class="fas fa-chevron-left"></i></button>
+
+        <div class="slides-js">
+            <div class="slide-js">
+            <div class="servicios-text">
+                <h2>Área de Mayores</h2>
+                <p><strong>Programas de convivencia</strong> y <strong>talleres adaptados</strong> para fomentar el <strong>bienestar social</strong>.</p>
+                <ul class="servicios-social-media">
+                    <li>
+                        <i class="fa-brands fa-facebook"></i>
+                        <a href="https://www.facebook.com/mayoresenlazubia/?locale=es_ES" target="_blank">@mayoresenlazubia</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="servicios-img servicios-img1"></div>
+            </div>
+
+            <div class="slide-js">
+            <div class="servicios-text">
+                <h2>Área de Igualdad</h2>
+                <p>Campañas de <strong>equidad</strong>, <strong>inclusión</strong> y <strong>respeto</strong> en todos los ámbitos.</p>
+                <ul class="servicios-social-media">
+                    <li>
+                        <i class="fa-brands fa-facebook"></i>
+                        <a href="https://www.facebook.com/igualdadcimzubia/?locale=es_ES" target="_blank">@mayoresenlazubia</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="servicios-img servicios-img2"></div>
+            </div>
+
+            <div class="slide-js">
+            <div class="servicios-text">
+                <h2>Servicios Sociales</h2>
+                <p><strong>Atención personalizada</strong> y <strong>ayudas sociales</strong> para colectivos vulnerables.</p>
+                <ul class="servicios-social-media">
+                    <li>
+                    <i class="fa-solid fa-phone"></i>
+                        <a href="tel:+958593115" class="telefono" id="telefono">958 59 31 15</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="servicios-img servicios-img3"></div>
+            </div>
+        </div>
+
+        <button class="slider-btn next"><i class="fas fa-chevron-right"></i></button>
+    </div>
+  </div>
+</section>
+
+
+<section class="cultura">
+    <div class="cultura-container">
+        <h1>cultura</h1>
+        <span class="white-line"></span>
+
+        <div class="cultura-columns">
+            <div class="cultura-column cultura-column1">
+                <div class="cultura-text">
+                    <p>
+
+                    </p>
+                    <i></i><a href="" target="_blank">culturalazubia</a>
+                </div>
+            </div>
+            <div class="cultura-column cultura-column2">
+                <div class="cultura-collage">
+                    <div class="cultura-img cultura-img1"></div>
+                    <div class="cultura-img cultura-img2"></div>
+                    <div class="cultura-img cultura-img3"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="deportes">
+    <div class="deportes-container">
+        <h1>deportes</h1>
+        <span class="white-line"></span>
+
+        <div class="deportes-columns">
+            <div class="deportes-column deportes-column1">
+                <div class="deportes-collage">
+                    <div class="deportes-img deportes-img1"></div>
+                    <div class="deportes-img deportes-img2"></div>
+                </div>
+            </div>
+            <div class="deportes-column deportes-column2">
+                <div class="deportes-text">
+                    <p>
+
+                    </p>
+                    <i></i><a href="" target="_blank">deporteslazubia</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="fiestas">
+    <div class="fiestas-container">
+        <h1>fiestas</h1>
+        <span class="white-line"></span>
+    </div>
+</section>
+
 <?php
 get_footer();
 ?>

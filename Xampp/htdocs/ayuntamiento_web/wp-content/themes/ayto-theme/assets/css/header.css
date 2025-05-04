@@ -356,11 +356,11 @@ header.hidden {
 
 .black-button {
     background-color: var(--black);
+    border-radius: 10px;
     color: var(--white);
     border: 2px solid var(--black);
     padding: 1rem 2rem;
-    margin-top: 1rem;
-    font-size: 1rem;
+    font-size: clamp(1rem, 0.933rem + 0.222vw, 1.2rem);
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease;
 }

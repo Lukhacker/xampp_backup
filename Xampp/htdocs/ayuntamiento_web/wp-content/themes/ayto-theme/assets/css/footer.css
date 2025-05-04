@@ -169,6 +169,7 @@ footer {
     font-family: Montserrat, sans-serif;
     text-decoration: none;
     position: relative;
+    font-size: clamp(1rem, 0.933rem + 0.222vw, 1.2rem);
     color: var(--white);
 }
 

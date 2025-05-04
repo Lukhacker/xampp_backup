@@ -55,6 +55,16 @@ function cargar_scripts_personalizados() {
             true
         );
     }
+
+    if (is_page('areas')) {
+        wp_enqueue_script(
+            'slider-script',
+            get_template_directory_uri() . '/assets/js/slider.js',
+            array(),
+            null,
+            true
+        );
+    }
 }
 add_action('wp_enqueue_scripts', 'cargar_scripts_personalizados');
 
