@@ -127,10 +127,11 @@ get_header();
         <div class="cultura-columns">
             <div class="cultura-column cultura-column1">
                 <div class="cultura-text">
+                    <h2>La Zubia Cultural: Expresa, Descubre, Inspira</h2>
                     <p>
-
+                        El <strong>Área de Cultura</strong> del Ayuntamiento de La Zubia impulsa una oferta variada centrada en la <strong>literatura</strong>, la <strong>música</strong> y el <strong>arte</strong>, con el objetivo de acercar la cultura a todos los vecinos. A través de múltiples actividades y eventos, se fomenta la <strong>creación artística</strong>, se respalda el talento de <strong>artistas locales</strong> y se promueve la <strong>participación activa</strong> de la ciudadanía en la vida cultural del municipio. La cultura en La Zubia es un motor de <strong>convivencia, aprendizaje y expresión</strong>.
                     </p>
-                    <i></i><a href="" target="_blank">culturalazubia</a>
+                    <button class="black-button"><a href="https://culturalazubia.wordpress.com/" target="_blank">Página de Cultura <i class="fa-solid fa-chevron-right"></i></a></button>
                 </div>
             </div>
             <div class="cultura-column cultura-column2">
@@ -146,24 +147,24 @@ get_header();
 
 <section class="deportes">
     <div class="deportes-container">
-        <h1>deportes</h1>
-        <span class="white-line"></span>
-
-        <div class="deportes-columns">
-            <div class="deportes-column deportes-column1">
-                <div class="deportes-collage">
-                    <div class="deportes-img deportes-img1"></div>
-                    <div class="deportes-img deportes-img2"></div>
+        <div class="deportes-title">
+            <h1>deportes</h1>
+            <span class="white-line"></span>
+        </div>
+        <div class="deportes-content">
+            <div class="deportes-items">
+                <div class="deportes-item deportes-item1">
+                    <h2>La Zubia Activa: Muévete, Supera, Disfruta</h2>
                 </div>
-            </div>
-            <div class="deportes-column deportes-column2">
-                <div class="deportes-text">
+                <span class="vertical-black-line"></span>
+                <div class="deportes-item deportes-item2">
                     <p>
-
+                        El <strong>Área de Deportes</strong> del Ayuntamiento de La Zubia promueve un estilo de vida <strong>activo y saludable</strong>, facilitando el acceso a <strong>instalaciones deportivas</strong> y organizando actividades que fomentan la <strong>participación ciudadana</strong>, la <strong>superación personal</strong> y el <strong>compañerismo</strong>.
                     </p>
-                    <i></i><a href="" target="_blank">deporteslazubia</a>
+                                
+                    <button class="black-button"><a href="https://lazubia.es/wp-content/uploads/oferta-deportiva-la-zubia.pdf" target="_blank">Descubre nuestros deportes <i class="fa-solid fa-chevron-right"></i></i></a></button>
                 </div>
-            </div>
+            </div>  
         </div>
     </div>
 </section>
@@ -172,6 +173,21 @@ get_header();
     <div class="fiestas-container">
         <h1>fiestas</h1>
         <span class="white-line"></span>
+
+        <div class="fiestas-columns">
+            <div class="fiestas-column fiestas-column1">
+                <h2>Últimos Eventos</h2>
+                <?php echo do_shortcode('[ultimos_eventos_fiestas]'); ?>
+            </div>
+            <div class="fiestas-column fiestas-column2">
+                <div class="fiestas-text">
+                    <h2>La Zubia en Fiesta: Vive, Comparte, Celebra</h2>
+                    <p>
+                        El <strong>Área de Fiestas</strong> del Ayuntamiento de La Zubia trabaja para mantener vivas nuestras <strong>tradiciones</strong> y ofrecer momentos de <strong>convivencia</strong> y <strong>alegría colectiva</strong>. A lo largo del año, se celebran numerosas <strong>festividades populares</strong> que unen a vecinos y visitantes, reforzando la <strong>identidad cultural</strong> del municipio y fomentando la <strong>participación activa</strong> de todos los públicos.
+                    </p>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 

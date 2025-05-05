@@ -161,3 +161,93 @@ function cargar_calendar_js() {
     ));
 }
 
+/*FIESTAS*/
+
+function mostrar_ultimos_eventos_fiestas() {
+    ob_start(); // Iniciar el buffer de salida
+
+    $args = array(
+        'post_type' => 'event',
+        'posts_per_page' => 2,
+        'orderby' => 'eventstart',
+        'order' => 'DESC',
+    );
+
+    $event_query = new WP_Query($args);
+
+    if ($event_query->have_posts()) :
+        while ($event_query->have_posts()) : $event_query->the_post(); ?>
+            <div class="evento-item">
+                <div class="evento-imagen">
+                    <?php if (has_post_thumbnail()) : ?>
+                        <a href="<?php the_permalink(); ?>">
+                            <?php the_post_thumbnail('medium'); ?>
+                        </a>
+                    <?php endif; ?>
+                </div>
+                <div class="evento-info">
+                    <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                    <p class="evento-fecha">
+                        <?php echo eo_get_the_start('j F Y, H:i'); ?>
+                    </p>
+                    <p><?php echo get_the_excerpt(); ?></p>
+                </div>
+            </div>
+        <?php endwhile;
+        wp_reset_postdata();
+    else :
+        echo '<p>No hay eventos próximos en este momento.</p>';
+    endif;
+
+    return ob_get_clean(); // Devolver el contenido del buffer
+}
+add_shortcode('ultimos_eventos_fiestas', 'mostrar_ultimos_eventos_fiestas');
+
+function zubia_override_event_css() {
+    if ( is_singular('event') ) {
+        ?>
+        <style>
+            .eventorganiser-event-meta {
+                background-color: var(--white);
+                color: var(--black);
+                font-size: clamp(1.5rem, 1.333rem + 0.556vw, 2rem);
+                border-radius: 10px;
+                padding: 2rem 2rem 0rem 2rem;
+                line-height: 1.6;
+            }
+
+            .eventorganiser-event-meta h4 {
+                display: none;
+                font-size: clamp(1.5rem, 1.333rem + 0.556vw, 2rem);
+                margin-bottom: 1rem;
+                color: var(--black);
+                padding: 1rem;
+            }
+
+            .eventorganiser-event-meta ul {
+                list-style: none;
+                padding: 1rem;
+                margin: 0;
+            }
+
+            .post-body {
+                background-color: var(--white);
+                border-radius: 10px;
+                p {
+                    color: var(--black);
+                    padding: 2rem;
+                }
+            }
+        </style>
+        <?php
+    }
+}
+add_action('wp_head', 'zubia_override_event_css');
+
+function zubia_custom_event_date_label( $text ) {
+    if ( 'Date' === $text ) {
+        return 'Fecha';
+    }
+    return $text;
+}
+add_filter( 'gettext', 'zubia_custom_event_date_label' );
