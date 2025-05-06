@@ -11,7 +11,9 @@
     <header role="banner" id="nav">
         <nav role="navigation" class="main-nav">
         <div class="logo-secreto">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png" alt="Logo">
+            <a href="<?php echo home_url('/'); ?>">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png" alt="Logo">
+            </a>
         </div>
         <form action="<?php echo site_url('/'); ?>" method="get" class="secret-search-form search-form">
             <input type="text" name="s" placeholder="Buscar..." value="<?php the_search_query(); ?>">

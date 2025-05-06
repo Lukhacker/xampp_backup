@@ -650,7 +650,7 @@
 #eventos-del-dia img {
     width: 100%;
     height: auto;
-    border-radius: 8px; /* Bordes redondeados para las imágenes */
+    border-radius: 10px;
     margin-bottom: 20px;
 }
 
@@ -661,6 +661,10 @@
 
 #eventos-del-dia a:hover {
     text-decoration: underline;
+}
+
+.post-meta {
+    display: none !important;
 }
 
 /*GALERÍA*/

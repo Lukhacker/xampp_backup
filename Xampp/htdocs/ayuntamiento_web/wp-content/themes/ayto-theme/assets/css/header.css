@@ -131,19 +131,38 @@ h3 {
 
 .logo-secreto {
     flex-shrink: 0;
-
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
-    justify-content: row nowrap;
+    position: relative; /* Necesario para posicionar el círculo */
+    overflow: hidden; /* Para ocultar cualquier contenido fuera del contorno */
+}
 
-    display: none;
+.logo-secreto::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    aspect-ratio: 1 / 1; /* 👈 fuerza que el alto sea igual al ancho */
+    background-color: var(--red);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    transition: width 0.8s ease;
+}
+
+/* Hover: solo expandimos el ancho y el alto lo mantiene igual gracias al aspect-ratio */
+.logo-secreto:hover::before {
+    width: 95%;
 }
 
 .logo-secreto img {
     width: auto;
     height: 100px;
     padding: .8rem;
+    position: relative;
+    z-index: 1; /* Asegura que la imagen esté encima del círculo */
 }
 
 /*NAV*/
@@ -250,18 +269,40 @@ header.hidden {
 
 .logo {
     flex-shrink: 0;
-
     display: flex;
     align-items: center;
     justify-content: center;
-    justify-content: row nowrap;
+    position: relative; /* Necesario para posicionar el círculo */
+    overflow: hidden; /* Para ocultar cualquier contenido fuera del contorno */
+}
+
+.logo::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    aspect-ratio: 1 / 1; /* 👈 fuerza que el alto sea igual al ancho */
+    background-color: var(--red);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    transition: width 0.8s ease;
+}
+
+/* Hover: solo expandimos el ancho y el alto lo mantiene igual gracias al aspect-ratio */
+.logo:hover::before {
+    width: 95%;
 }
 
 .logo img {
     width: auto;
     height: 100px;
     padding: .8rem;
+    position: relative;
+    z-index: 1; /* Asegura que la imagen esté encima del círculo */
 }
+
 
 .nav-section {
     font-family: NouvelRegular, sans-serif;

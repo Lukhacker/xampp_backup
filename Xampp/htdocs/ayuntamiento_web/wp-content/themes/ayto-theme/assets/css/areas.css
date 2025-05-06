@@ -698,13 +698,13 @@
     flex-flow: column nowrap;
 }
 
-.fiestas-column1 {
+.fiestas-column2 {
     flex: 1;
     align-items: flex-start;
     gap: 2rem;
 }
 
-.fiestas-column2 {
+.fiestas-column1 {
     flex: 1;
     align-items: center;
 

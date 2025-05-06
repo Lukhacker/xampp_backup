@@ -176,16 +176,16 @@ get_header();
 
         <div class="fiestas-columns">
             <div class="fiestas-column fiestas-column1">
-                <h2>Últimos Eventos</h2>
-                <?php echo do_shortcode('[ultimos_eventos_fiestas]'); ?>
-            </div>
-            <div class="fiestas-column fiestas-column2">
                 <div class="fiestas-text">
                     <h2>La Zubia en Fiesta: Vive, Comparte, Celebra</h2>
                     <p>
                         El <strong>Área de Fiestas</strong> del Ayuntamiento de La Zubia trabaja para mantener vivas nuestras <strong>tradiciones</strong> y ofrecer momentos de <strong>convivencia</strong> y <strong>alegría colectiva</strong>. A lo largo del año, se celebran numerosas <strong>festividades populares</strong> que unen a vecinos y visitantes, reforzando la <strong>identidad cultural</strong> del municipio y fomentando la <strong>participación activa</strong> de todos los públicos.
                     </p>
                 </div>
+            </div>
+            <div class="fiestas-column fiestas-column2">
+                <h2>Últimos Eventos</h2>
+                <?php echo do_shortcode('[ultimos_eventos_fiestas]'); ?>
             </div>
         </div>
     </div>
