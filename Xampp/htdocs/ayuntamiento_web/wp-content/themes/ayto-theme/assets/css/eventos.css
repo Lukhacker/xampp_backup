@@ -11,6 +11,7 @@
     background-size: cover;
     background-position: center 20%;
     background-repeat: no-repeat;
+    margin-bottom: 2rem;
 }
 
 .presentation-container {
@@ -53,7 +54,6 @@
     justify-content: flex-start;
     align-items: center;
     flex-flow: column nowrap;
-    margin-top: 2rem;
 }
 
 .events-container {
@@ -63,6 +63,7 @@
     justify-content: center;
     align-items: flex-start;
     flex-flow: column nowrap;
+    gap: 2rem;
 }
 
 .events-link {
@@ -75,7 +76,6 @@
     height: auto;
     background-color: var(--white);
     border-radius: 10px;
-    margin-bottom: 2rem;
 
     display: flex;
     align-items: center;

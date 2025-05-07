@@ -532,3 +532,35 @@
 13:25:47  [main] 	Deinitializing Modules
 13:25:47  [main] 	Deinitializing Control Panel
 
+08:17:17  [main] 	Initializing Control Panel
+08:17:17  [main] 	Windows Version:  Enterprise  64-bit
+08:17:17  [main] 	XAMPP Version: 8.0.30
+08:17:17  [main] 	Control Panel Version: 3.3.0  [ Compiled: Apr 6th 2021 ]
+08:17:17  [main] 	Running with Administrator rights - good!
+08:17:17  [main] 	XAMPP Installation Directory: "c:\secret\secretsecret\xampp\"
+08:17:17  [main] 	Checking for prerequisites
+08:17:19  [main] 	All prerequisites found
+08:17:19  [main] 	Initializing Modules
+08:17:19  [main] 	Starting Check-Timer
+08:17:19  [main] 	Control Panel Ready
+10:34:59  [Apache] 	Attempting to start Apache app...
+10:34:59  [Apache] 	Status change detected: running
+10:34:59  [mysql] 	Attempting to start MySQL app...
+10:35:01  [mysql] 	Status change detected: running
+11:17:31  [Apache] 	Attempting to stop Apache (PID: 21268)
+11:17:31  [Apache] 	Attempting to stop Apache (PID: 13920)
+11:17:31  [Apache] 	Status change detected: stopped
+11:17:31  [mysql] 	Attempting to stop MySQL app...
+11:17:32  [mysql] 	Status change detected: stopped
+11:20:12  [Apache] 	Attempting to start Apache app...
+11:20:12  [Apache] 	Status change detected: running
+11:20:12  [mysql] 	Attempting to start MySQL app...
+11:20:13  [mysql] 	Status change detected: running
+13:09:29  [Apache] 	Attempting to stop Apache (PID: 12400)
+13:09:29  [Apache] 	Attempting to stop Apache (PID: 22180)
+13:09:29  [Apache] 	Status change detected: stopped
+13:09:29  [mysql] 	Attempting to stop MySQL app...
+13:09:30  [mysql] 	Status change detected: stopped
+13:11:53  [main] 	Deinitializing Modules
+13:11:53  [main] 	Deinitializing Control Panel
+

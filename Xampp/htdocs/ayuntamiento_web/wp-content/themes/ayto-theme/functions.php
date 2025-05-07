@@ -212,7 +212,7 @@ function zubia_override_event_css() {
                 color: var(--black);
                 font-size: clamp(1.5rem, 1.333rem + 0.556vw, 2rem);
                 border-radius: 10px;
-                padding: 2rem 2rem 0rem 2rem;
+                margin-bottom: 2rem;
                 line-height: 1.6;
             }
 
@@ -234,9 +234,20 @@ function zubia_override_event_css() {
                 background-color: var(--white);
                 border-radius: 10px;
                 p {
+                    font-family: Montserrat, Calibri;
+                    text-align: justify;
+                    word-spacing: .2rem;
                     color: var(--black);
-                    padding: 2rem;
+                    font-size: clamp(1rem, 0.933rem + 0.222vw, 1.2rem);
                 }
+            }
+
+            .html-div {
+                font-family: Montserrat, Calibri;
+                text-align: justify;
+                word-spacing: .2rem;
+                color: var(--black);
+                font-size: clamp(1rem, 0.933rem + 0.222vw, 1.2rem);
             }
         </style>
         <?php

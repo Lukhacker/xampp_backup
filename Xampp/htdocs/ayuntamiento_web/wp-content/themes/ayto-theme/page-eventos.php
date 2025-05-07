@@ -11,9 +11,11 @@ get_header();
 
 <?php
 $args = array(
-    'post_type'      => 'post',
-    'category_name'  => 'eventos',
+    'post_type'      => 'event',
     'posts_per_page' => 10,
+    'orderby'        => 'meta_value',
+    'meta_key'       => '_eventorganiser_schedule_start_start',
+    'order'          => 'DESC',
 );
 
 $query = new WP_Query($args);
@@ -43,6 +45,8 @@ else :
     echo '<p>No hay eventos disponibles.</p>';
 endif;
 ?>
+
+
 
 <?php
 get_footer();
