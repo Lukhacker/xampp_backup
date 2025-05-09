@@ -249,6 +249,16 @@ function zubia_override_event_css() {
                 color: var(--black);
                 font-size: clamp(1rem, 0.933rem + 0.222vw, 1.2rem);
             }
+
+            div[dir="auto"] {
+                font-family: Montserrat, Calibri;
+                text-align: justify;
+                word-spacing: 0.2rem;
+                color: var(--black);
+                font-size: clamp(1rem, 0.933rem + 0.222vw, 1.2rem);
+                margin-bottom: .5rem;
+            }
+
         </style>
         <?php
     }
