@@ -129,7 +129,6 @@
 .events-content {
     position: relative;
     z-index: 1;
-    margin-left: 1.5rem;
     flex: 3;
     padding: 1.5rem;
 }
@@ -153,4 +152,16 @@
 .events-item:hover .events-content h2,
 .events-item:hover .events-content p {
     color: var(--white);
+}
+
+@media (max-width: 780px) {
+    .post-thumbnail {
+        aspect-ratio: 4/7;
+    }
+}
+
+@media (max-width: 550px) {
+    .post-thumbnail {
+        aspect-ratio: 4/10;
+    }
 }

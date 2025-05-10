@@ -670,11 +670,6 @@
     margin-bottom: 1rem;
 }
 
-#eventos-del-dia a {
-    color: #0073e6;
-    text-decoration: none;
-}
-
 #eventos-del-dia a:hover {
     text-decoration: underline;
 }
@@ -757,12 +752,39 @@
 }
 
 @media (max-width: 1320px) {
+    /*INTRO*/
     .intro-img {
         aspect-ratio: 16/11;
     }
 }
 
+@media (max-width: 1330px) {
+    /*NOTICIAS*/
+    .post-thumbnail {
+        aspect-ratio: 4/7;
+    }
+}
+
+@media (max-width: 1120px) {
+    /*INTRO*/
+    .intro-img {
+        aspect-ratio: 1/1;
+    }
+}
+
+@media (max-width: 1060px) {
+    /*NOTICIAS*/
+    .post-thumbnail {
+        aspect-ratio: 1/1;
+    }
+    .news-row {
+        flex-flow: column nowrap;
+        gap: 0rem;
+    }
+}
+
 @media (max-width: 1020px) {
+    /*VISITAR*/
     .visitar-items {
         justify-content: center;
         flex-wrap: wrap;
@@ -782,23 +804,8 @@
     }
 }
 
-@media (max-width: 600px) {
-    .visitar-items > .visitar-link:nth-child(3) {
-        max-width: 100%;
-    }
-
-    .visitar-items > .visitar-link {
-        max-width: 100%;
-    }
-    
-    .visitar-items {
-        flex-flow: column nowrap;
-    }
-}
-
-
-
 @media (max-width: 900px) {
+    /*INTRO*/
     .intro-img {
         aspect-ratio: 16/8;
     }
@@ -813,9 +820,36 @@
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
     }
+    /*CALENDARIO*/
+    .widget_calendar.eo-calendar {
+        width: 100% !important;
+    }
+}
+
+@media (max-width: 600px) {
+    /*VISITAR*/
+    .visitar-items > .visitar-link:nth-child(3) {
+        max-width: 100%;
+    }
+
+    .visitar-items > .visitar-link {
+        max-width: 100%;
+    }
+    
+    .visitar-items {
+        flex-flow: column nowrap;
+    }
+}
+
+@media (max-width: 670px) {
+    /*NOTICIAS*/
+    .post-thumbnail {
+        aspect-ratio: 4/7;
+    }
 }
   
 @media (max-width: 575px) {
+    /*HERO*/
     .hero-buttons {
         gap: 1rem;
     }

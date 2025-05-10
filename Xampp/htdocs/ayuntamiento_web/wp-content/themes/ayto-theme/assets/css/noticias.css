@@ -129,7 +129,6 @@
 .news-content {
     position: relative;
     z-index: 1;
-    margin-left: 1.5rem;
     flex: 3;
     padding: 1.5rem;
 }
@@ -155,3 +154,14 @@
     color: var(--white);
 }
 
+@media (max-width: 920px) {
+    .post-thumbnail {
+        aspect-ratio: 4/7;
+    }
+}
+
+@media (max-width: 590px) {
+    .post-thumbnail {
+        aspect-ratio: 4/11;
+    }
+}

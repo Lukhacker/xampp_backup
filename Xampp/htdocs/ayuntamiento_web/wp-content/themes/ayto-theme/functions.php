@@ -125,7 +125,7 @@ function obtener_eventos_fecha() {
     ));
 
     if ($eventos) {
-        ob_start(); // Capturamos HTML
+        ob_start(); //CapturO HTML
 
         foreach ($eventos as $evento) {
             ?>

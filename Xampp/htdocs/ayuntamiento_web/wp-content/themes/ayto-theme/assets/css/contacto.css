@@ -84,6 +84,7 @@
 .info-item {
     flex: 1;
     max-width: 400px;
+    min-width: 350px;
     height: auto;
     display: flex;
     justify-content: flex-start;
@@ -206,13 +207,9 @@
     flex-flow: column nowrap;
     background: var(--white);
 
-    transition: transform 0.3s ease-in-out;
     border-radius: 10px;
 }
 
-.instalaciones-item:hover {
-    transform: scale(1.05);
-}
 
 .instalaciones-text {
     width: 100%;
@@ -227,6 +224,7 @@
 
     h2, h3, p {
         color: var(--black);
+        text-align: center;
     }
 }
 
@@ -360,4 +358,10 @@ textarea {
     display: block;
     background-color: #f8d7da;
     color: #721c24;
+}
+
+@media (max-width: 550px) {
+    .instalaciones-row {
+        flex-flow: column nowrap;
+    }
 }
