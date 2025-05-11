@@ -168,7 +168,7 @@ function mostrar_ultimos_eventos_fiestas() {
 
     $args = array(
         'post_type' => 'event',
-        'posts_per_page' => 2,
+        'posts_per_page' => 1,
         'orderby' => 'eventstart',
         'order' => 'DESC',
     );

@@ -131,7 +131,7 @@
 .turismo-img {
     width: 100%;
     height: auto;
-    padding-top: 100%;
+    aspect-ratio: 1 / 1;
     background-size: cover;
     background-position: center;
     transition: transform 0.3s ease;
@@ -317,7 +317,7 @@
 }
 
 .slide-js {
-  min-width: 100%;
+  width: 100%;
   flex-shrink: 0;
   display: flex;
   background: var(--white);
@@ -340,12 +340,13 @@
 .servicios-text,
 .servicios-img {
   flex: 1;
-  min-height: 250px;
 }
 
 .servicios-img {
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
+    aspect-ratio: 16/9;
 }
 
 .servicios-img1 {
@@ -626,8 +627,9 @@
 
 .deportes-items {
     width: 80%;
-    height: 80%;
-    padding: 1rem;
+    height: auto;
+    padding: 2rem;
+    margin: 2rem;
 
     display: flex;
     flex-flow: row nowrap;
@@ -734,12 +736,11 @@
 
 .evento-item {
     display: flex;
-    gap: 20px;
+    gap: 1rem;
     background-color: var(--white);
     color: var(--black);
     border-radius: 10px;
     overflow: hidden;
-    margin-bottom: 1rem;
     padding-right: 1rem;
     align-items: center;
     position: relative;
@@ -762,6 +763,15 @@
     aspect-ratio: 1/1;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
+}
+
+.evento-imagen a {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    position: relative;
 }
 
 .evento-info {
@@ -815,47 +825,136 @@
 
 
 
+@media (max-width: 1160px) {
+    /*TURISMO Y JUVENTUD*/
+    .turismo-column1, .turismo-column2, .juventud-column1, .juventud-column2 {
+        flex: 1;
+    }
 
+    .turismo-img {
+        aspect-ratio: 4/5;
+    }
+
+    .juventud-img1 {
+        aspect-ratio: 16/10;
+    }
+
+    /*SERVICIOS*/
+    .servicios-img {
+        aspect-ratio: 16/12;
+    }
+
+    /*CULTURA*/
+    .cultura-column1, .cultura-column2 {
+        flex: 1;
+    }
+
+    .cultura-img {
+        padding-top: 120%;
+    }
+}
+
+@media (max-width: 1010px) {
+    /*TURISMO Y JUVENTUD*/
+    .turismo-img {
+        aspect-ratio: 4/7;
+    }
+
+    .juventud-img1 {
+        aspect-ratio: 16/13;
+    }
+    
+}
+
+@media (max-width: 990px) {
+    /*SERVICIOS*/
+    .servicios-img {
+        aspect-ratio: 16/9;
+    }
+    .slide-js {
+        flex-flow: column-reverse nowrap;
+    }
+    .servicios-text {
+        padding: 2rem;
+    }
+    /*CULTURA*/
+    .cultura-img {
+        padding-top: 160%;
+    }
+
+    /*DEPORTES*/
+    .deportes-items {
+        width: 90%;
+    }
+}
 
 @media (max-width: 850px) {
     /*DEPORTES*/
     .deportes-content {
         aspect-ratio: 16/7;
     }
-}
+    /*TURISMO Y JUVENTUD*/
+    .turismo-img {
+        aspect-ratio: 1/1;
+    }
+    .juventud-img {
+        aspect-ratio: 0;
+        padding-top: 50%;
+    }
+    .turismo-columns {
+        flex-flow: column-reverse nowrap;
+        gap: 2rem;
+    }
+    .juventud-columns {
+        flex-flow: column nowrap;
+        gap: 2rem;
+    }
+    .turismo-text, .juventud-text {
+        border-radius: 10px;
+    }
+    .turismo-column1, .turismo-column2, .juventud-column1, .juventud-column2 {
+        width: 100%;
+    }
 
-@media (max-width: 650px) {
+    /*CULTURA*/
+    .cultura-column1, .cultura-column2 {
+        width: 100%;
+    }
+
+    .cultura-text {
+        border-radius: 10px;
+    }
+
+    .cultura-img {
+        padding-top: 100%;
+    }
+
+    .cultura-columns {
+        flex-flow: column-reverse nowrap;
+        gap: 2rem;
+    }
+
+    /*DEPORTES*/
+    .deportes-items {
+        flex-flow: column nowrap;
+        gap: 1rem;
+    }
+
+    .deportes-item h2 {
+        text-align: left;
+    }
+
     /*DEPORTES*/
     .deportes-content {
         aspect-ratio: 16/9;
     }
-    
-    .deportes-items {
-        flex-flow: column nowrap;
-    }
-
-    .deportes-item {
-        flex: 0;
-        align-items: center;
-
-        h1 {
-            margin-bottom: 1.5rem;
-            text-align: center;
-        }
-    }
 }
+
 
 @media (max-width: 550px) {
-    /*BOOKING*/
+    /*DEPORTES*/
     .deportes-content {
-        aspect-ratio: 16/11;
-    }
-
-    .deportes-items {
-        height: 85%;
-    }
-
-    .deportes-item h1 {
-        margin-bottom: .8rem;
+        aspect-ratio: 16/15;
     }
 }
+

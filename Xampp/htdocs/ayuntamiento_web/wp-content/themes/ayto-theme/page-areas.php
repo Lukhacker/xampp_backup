@@ -181,10 +181,11 @@ get_header();
                     <p>
                         El <strong>Área de Fiestas</strong> del Ayuntamiento de La Zubia trabaja para mantener vivas nuestras <strong>tradiciones</strong> y ofrecer momentos de <strong>convivencia</strong> y <strong>alegría colectiva</strong>. A lo largo del año, se celebran numerosas <strong>festividades populares</strong> que unen a vecinos y visitantes, reforzando la <strong>identidad cultural</strong> del municipio y fomentando la <strong>participación activa</strong> de todos los públicos.
                     </p>
+                    <button class="black-button"><a href="https://lazubia.es/wp-content/uploads/oferta-deportiva-la-zubia.pdf" target="_blank">Nuestros próximos eventos <i class="fa-solid fa-chevron-right"></i></i></a></button>
                 </div>
             </div>
             <div class="fiestas-column fiestas-column2">
-                <h2>Últimos Eventos</h2>
+                <h2>Último Evento</h2>
                 <?php echo do_shortcode('[ultimos_eventos_fiestas]'); ?>
             </div>
         </div>
