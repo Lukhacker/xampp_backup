@@ -778,3 +778,45 @@
 20:16:28  [main] 	Deinitializing Modules
 20:16:28  [main] 	Deinitializing Control Panel
 
+10:04:40  [main] 	Initializing Control Panel
+10:04:40  [main] 	Windows Version:  Enterprise  64-bit
+10:04:40  [main] 	XAMPP Version: 8.0.30
+10:04:40  [main] 	Control Panel Version: 3.3.0  [ Compiled: Apr 6th 2021 ]
+10:04:40  [main] 	Running with Administrator rights - good!
+10:04:40  [main] 	XAMPP Installation Directory: "c:\secret\secretsecret\xampp\"
+10:04:40  [main] 	Checking for prerequisites
+10:04:42  [main] 	All prerequisites found
+10:04:42  [main] 	Initializing Modules
+10:04:42  [main] 	Starting Check-Timer
+10:04:42  [main] 	Control Panel Ready
+10:09:27  [Apache] 	Attempting to start Apache app...
+10:09:27  [Apache] 	Status change detected: running
+10:09:29  [mysql] 	Attempting to start MySQL app...
+10:09:30  [mysql] 	Status change detected: running
+10:09:30  [mysql] 	Status change detected: stopped
+10:09:30  [mysql] 	Error: MySQL shutdown unexpectedly.
+10:09:30  [mysql] 	This may be due to a blocked port, missing dependencies, 
+10:09:30  [mysql] 	improper privileges, a crash, or a shutdown by another method.
+10:09:30  [mysql] 	Press the Logs button to view error logs and check
+10:09:30  [mysql] 	the Windows Event Viewer for more clues
+10:09:30  [mysql] 	If you need more help, copy and post this
+10:09:30  [mysql] 	entire log window on the forums
+10:09:31  [mysql] 	Attempting to start MySQL app...
+10:09:32  [mysql] 	Status change detected: running
+12:31:56  [mysql] 	Attempting to stop MySQL app...
+12:31:56  [mysql] 	Status change detected: stopped
+12:31:56  [Apache] 	Attempting to stop Apache (PID: 2280)
+12:31:56  [Apache] 	Attempting to stop Apache (PID: 8280)
+12:31:56  [Apache] 	Status change detected: stopped
+15:39:28  [Apache] 	Attempting to start Apache app...
+15:39:29  [Apache] 	Status change detected: running
+15:39:32  [mysql] 	Attempting to start MySQL app...
+15:39:33  [mysql] 	Status change detected: running
+16:43:29  [mysql] 	Attempting to stop MySQL app...
+16:43:30  [mysql] 	Status change detected: stopped
+16:43:30  [Apache] 	Attempting to stop Apache (PID: 9328)
+16:43:30  [Apache] 	Attempting to stop Apache (PID: 1372)
+16:43:30  [Apache] 	Status change detected: stopped
+16:44:30  [main] 	Deinitializing Modules
+16:44:30  [main] 	Deinitializing Control Panel
+

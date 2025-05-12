@@ -736,15 +736,14 @@
 
 .evento-item {
     display: flex;
-    gap: 1rem;
     background-color: var(--white);
     color: var(--black);
     border-radius: 10px;
     overflow: hidden;
-    padding-right: 1rem;
     align-items: center;
     position: relative;
-    background-image: linear-gradient(to right, #f0f0f0 0%, #f0f0f0 100%);
+
+    background-image: linear-gradient(to right, var(--scroll-grey), var(--scroll-grey));
     background-size: 0% 100%;
     background-repeat: no-repeat;
     background-position: left;
@@ -755,6 +754,20 @@
     background-size: 100% 100%;
 }
 
+.evento-info h3,
+.evento-info p,
+.evento-info a {
+    transition: color 0.4s ease;
+}
+
+.evento-item:hover .evento-info h3,
+.evento-item:hover .evento-info p,
+.evento-item:hover .evento-info a {
+    color: var(--white);
+}
+
+
+
 
 .evento-imagen img {
     flex: 1;
@@ -764,6 +777,19 @@
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
 }
+
+.evento-imagen {
+    display: flex;
+    align-items: stretch;
+    line-height: 0;
+}
+
+
+.evento-imagen a img {
+    display: block;
+    line-height: 0;
+}
+
 
 .evento-imagen a {
     text-decoration: none;
@@ -776,10 +802,10 @@
 
 .evento-info {
     flex: 1;
+    padding: 1rem;
 }
 
 .evento-info h3 {
-    font-size: clamp(1.2rem, 1rem + 0.667vw, 1.8rem);
     font-weight: bold;
 }
 
@@ -800,6 +826,15 @@
     background-color: var(--black);
     transition: width 0.3s ease;
 }
+
+.evento-item:hover .evento-info h3 a {
+    color: var(--white);
+}
+
+.evento-item:hover .evento-info h3 a::after {
+    background: var(--white);
+}
+
 
 .evento-info h3 a:hover::after {
     width: 100%;
@@ -885,6 +920,13 @@
     /*DEPORTES*/
     .deportes-items {
         width: 90%;
+    }
+}
+
+@media (max-width: 950px) {
+    /*FIESTAS*/
+    .fiestas-columns {
+        flex-flow: column-reverse nowrap;
     }
 }
 

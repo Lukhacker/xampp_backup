@@ -751,6 +751,180 @@
     flex-flow: column nowrap;
 }
 
+.galeria-collage {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+}
+
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    width: 80%;
+    position: relative;
+}
+
+.galeria-item {
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    overflow: hidden;
+
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+/* Overlay oscuro */
+.galeria-item::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: inherit;
+    z-index: 1;
+}
+
+/*Lupa*/
+
+.galeria-item::after {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f00e"; /*código de la lupa*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.5);
+    color: var(--white);
+    font-size: 2rem;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    pointer-events: none;
+}
+
+.galeria-item:hover::before {
+    opacity: 1;
+}
+  
+.galeria-item:hover::after {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.galeria-item::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: inherit;
+}
+
+/*GALERIA LIGHTBOX*/
+.galeria-lightbox {
+  --bg: rgba(0,0,0,0.8);
+  position: fixed;
+  inset: 0;
+  background: var(--bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+
+  opacity: 0;
+  transform: scale(0.95);
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.galeria-lightbox.active {
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: all;
+}
+
+
+/* imagen ampliada */
+.galeria-lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+}
+
+/* botón cerrar */
+.galeria-lightbox .close-btn {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f00d";
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+.galeria-lightbox .close-btn::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f00d"; /* Código de la "X" */
+    font-size: 2rem;
+    color: #fff;
+}
+  
+/* Fila 1: [ 1 | 1 | 2 ] */
+.item1 { grid-column: 1 / 3; grid-row: 1; }
+.item2 { grid-column: 3;    grid-row: 1 / 3; }
+
+/* Fila 2: [ 3 | 4 | 2 ] */
+.item3 { grid-column: 1;    grid-row: 2 / 4; }
+.item4 { grid-column: 2;    grid-row: 2; }
+
+/* Fila 3: [ 3 | 6 | 7 ] */
+.item6 { grid-column: 2;    grid-row: 3 / 5; }
+.item7 { grid-column: 3;    grid-row: 3; }
+
+/* Fila 4: [ 5 | 6 | 9 ] */
+.item5 { grid-column: 1;    grid-row: 4; }
+.item9 { grid-column: 3;    grid-row: 4 / 6; }
+
+/* Fila 5: [ 8 | 8 | 9 ] */
+.item8 { grid-column: 1 / 3; grid-row: 5; }
+
+/* Fila 6: [10 | 11 | 11 ] */
+.item10 { grid-column: 1;   grid-row: 6; }
+.item11 { grid-column: 2 / 4; grid-row: 6; }
+
+/* Fila 7: [12 | 12 | 13 ] */
+.item12 { grid-column: 1 / 3; grid-row: 7; }
+.item13 { grid-column: 3;    grid-row: 7; }
+
+.item1  { background-image: url('../img/inicio/galeria1.jpg'); }
+.item2  { background-image: url('../img/inicio/galeria2.jpg'); }
+.item3  { background-image: url('../img/inicio/galeria3.jpg'); }
+.item4  { background-image: url('../img/inicio/galeria4.jpg'); }
+.item5  { background-image: url('../img/inicio/galeria5.jpg'); }
+.item6  { background-image: url('../img/inicio/galeria6.jpg'); }
+.item7  { background-image: url('../img/inicio/galeria7.jpg'); }
+.item8  { background-image: url('../img/inicio/galeria8.jpg'); }
+.item9  { background-image: url('../img/inicio/galeria9.jpg'); }
+.item10 { background-image: url('../img/inicio/galeria10.jpg'); }
+.item11 { background-image: url('../img/inicio/galeria11.jpg'); }
+.item12 { background-image: url('../img/inicio/galeria12.jpg'); }
+.item13 { background-image: url('../img/inicio/galeria13.jpg'); }
+
+
 @media (max-width: 1320px) {
     /*INTRO*/
     .intro-img {

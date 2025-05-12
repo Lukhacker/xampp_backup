@@ -154,8 +154,30 @@ get_header();
     <div class="galeria-container">
         <h1>Galería</h1>
         <span class="white-line"></span>
+        <div class="galeria-collage">
+            <div class="galeria-grid">
+                <div class="galeria-item item1"></div>
+                <div class="galeria-item item2"></div>
+                <div class="galeria-item item3"></div>
+                <div class="galeria-item item4"></div>
+                <div class="galeria-item item5"></div>
+                <div class="galeria-item item6"></div>
+                <div class="galeria-item item7"></div>
+                <div class="galeria-item item8"></div>
+                <div class="galeria-item item9"></div>
+                <div class="galeria-item item10"></div>
+                <div class="galeria-item item11"></div>
+                <div class="galeria-item item12"></div>
+                <div class="galeria-item item13"></div>
+            </div>
+        </div>
     </div>
 </section>
+
+<div class="galeria-lightbox">
+  <span class="close-btn"></span>
+  <img src="" alt="Ampliación" />
+</div>
 
 <?php
 get_footer();

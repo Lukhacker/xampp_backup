@@ -68,6 +68,19 @@ function cargar_scripts_personalizados() {
 }
 add_action('wp_enqueue_scripts', 'cargar_scripts_personalizados');
 
+function cargar_lightbox_solo_en_portada() {
+    if ( is_front_page() ) {
+        wp_enqueue_script(
+            'lightbox-script',
+            get_template_directory_uri() . '/assets/js/lightbox.js',
+            array(),
+            null,
+            true
+        );
+    }
+}
+add_action('wp_enqueue_scripts', 'cargar_lightbox_solo_en_portada');
+
 
 //Registro las páginas de la web
 function registrar_paginas_personalizadas() {
