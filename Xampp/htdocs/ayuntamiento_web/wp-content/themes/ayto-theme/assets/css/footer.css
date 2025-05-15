@@ -30,7 +30,7 @@ footer {
 
     border-radius: 10%;
     position: relative;
-    background-color: white;
+    background-color: var(--white);
 
     background: var(--dark-grey);
 

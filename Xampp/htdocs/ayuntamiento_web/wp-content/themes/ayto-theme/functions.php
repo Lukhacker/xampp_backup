@@ -116,6 +116,56 @@ function activar_imagenes_destacadas() {
 add_action('after_setup_theme', 'activar_imagenes_destacadas');
 
 
+/*Función para mostrar las ultimas noticias*/
+function render_ultimas_noticias() {
+    $args = array(
+        'post_type'      => 'post',
+        'posts_per_page' => 4,
+        'orderby'        => 'date',
+        'order'          => 'DESC',
+        'category_name'  => 'noticias'
+    );
+
+    $query = new WP_Query($args);
+
+    if ($query->have_posts()) :
+        $counter = 0;
+
+        while ($query->have_posts()) : $query->the_post(); ?>
+            <!-- Inicio de la noticia -->
+            <div class="news-item">
+                <a href="<?php the_permalink(); ?>" class="news-link">
+                    <div class="news-image">
+                        <?php 
+                        if (has_post_thumbnail()) {
+                            the_post_thumbnail('medium', array('class' => 'post-thumbnail'));
+                        } else {
+                            echo '<img src="' . get_template_directory_uri() . '/img/default.jpg" alt="Noticia">';
+                        }
+                        ?>
+                    </div>
+                    <div class="news-text">
+                        <h2><?php the_title(); ?></h2>
+                        <p><?php echo wp_trim_words(get_the_content(), 20, '...'); ?></p>
+                    </div>
+                </a>
+            </div>
+            <!-- Fin de la noticia -->
+
+            <?php
+            $counter++;
+            if ($counter % 2 == 0 && $counter < $query->post_count) {
+                echo '</div><div class="news-row">';
+            }
+
+        endwhile;
+
+        wp_reset_postdata();
+    else :
+        echo '<p>No hay noticias disponibles.</p>';
+    endif;
+}
+
 
 
 //CALENDARIO DE EVENTOS

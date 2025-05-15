@@ -163,8 +163,6 @@
     position: relative;
 }
 
-
-
 /*JUVENTUD*/
 
 .juventud {
@@ -361,7 +359,7 @@
     background-image: url(../img/areas/servicios.jpg);
 }
 
-/* Botones */
+/*Botones del slider*/
 .slider-js {
     position: relative;
     width: 100%;
@@ -446,8 +444,6 @@
     transform: scaleX(1);
     transform-origin: left; 
 }
-
-
 
 /*CULTURA*/
 
@@ -669,6 +665,7 @@
     align-items: center;
     flex-flow: column nowrap;
     margin-top: 2rem;
+    padding-bottom: 2rem;
 }
 
 .fiestas-container {

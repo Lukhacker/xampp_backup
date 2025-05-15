@@ -33,18 +33,17 @@
 }
 
 /*IMAGEN DE LA ENTRADA*/
-
 .post-thumbnail {
-    width: auto;
+    width: 100%;
     height: auto;
-    aspect-ratio: 16/9;
     max-height: 500px;
-
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
+    display: block;
     margin-bottom: 2rem;
+    border-radius: 10px;
+    object-fit: contain;
 }
+
+
 
 .post-body {
     margin-bottom: 2rem;
@@ -53,5 +52,17 @@
     padding: 2rem;
     p {
         color: var(--black);
+    }
+}
+
+@media (max-width: 955px) {
+    .post-container {
+        width: 80%;
+    }
+}
+
+@media (max-width: 600px) {
+    .post-container {
+        width: 90%;
     }
 }
