@@ -350,14 +350,14 @@ textarea {
 
 #responseMessage.success {
     display: block;
-    background-color: #d4edda;
-    color: #155724;
+    background-color: var(--light-green);
+    color: var(--dark-green);
 }
 
 #responseMessage.error {
     display: block;
-    background-color: #f8d7da;
-    color: #721c24;
+    background-color: var(--light-red);
+    color: var(--dark-red);
 }
 
 @media (max-width: 550px) {

@@ -8,6 +8,7 @@ document.getElementById("contact-form").addEventListener("submit", function(even
         method: 'POST',
         body: formData
     })
+    
     .then(response => response.json())
     .then(data => {
         const responseMessage = document.getElementById('responseMessage');

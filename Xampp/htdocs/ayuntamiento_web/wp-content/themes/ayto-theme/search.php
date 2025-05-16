@@ -7,8 +7,8 @@
         <?php
         $s = get_search_query();
         $args = array(
-            's' => $s, // Palabra clave de la búsqueda
-            'post_type' => array('post', 'page'), // Buscar en Entradas y Páginas
+            's' => $s, //Palabra clave de la búsqueda
+            'post_type' => array('post', 'page', 'event'), //Buscar en entradas, páginas y eventos
         );
         $query = new WP_Query($args);
         if ($query->have_posts()) {

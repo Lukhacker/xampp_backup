@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelector(".eo-widget-cal-wrap").addEventListener("click", function (e) {
         const target = e.target;
 
-        //Cualquier día con evento (pasado, presente o futuro)
+        //Cualquier día con evento (pasado, presente o futuro) para que se muestren todos en el calendario
         if (target.tagName === "A" && target.closest("td")?.classList.contains("event")) {
             e.preventDefault();
 

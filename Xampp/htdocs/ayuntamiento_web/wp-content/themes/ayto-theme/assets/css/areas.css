@@ -306,7 +306,7 @@
     flex-flow: column nowrap;
 }
 
-/* --- Slider con JS --- */
+/*Slider con JS*/
 
 .slides-js {
   display: flex;
@@ -763,9 +763,6 @@
     color: var(--white);
 }
 
-
-
-
 .evento-imagen img {
     flex: 1;
     height: auto;
@@ -855,7 +852,117 @@
     -webkit-box-orient: vertical;
 }
 
+/*LIGHTBOX*/
+.galeria-item {
+    position: relative;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
 
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+/*Overlay oscuro*/
+.galeria-item::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: inherit;
+    z-index: 1;
+}
+
+/*Lupa*/
+
+.galeria-item::after {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f00e";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.5);
+    color: var(--white);
+    font-size: 2rem;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    pointer-events: none;
+}
+
+.galeria-item:hover::before {
+    opacity: 1;
+}
+  
+.galeria-item:hover::after {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.galeria-item::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: inherit;
+}
+
+/*GALERIA LIGHTBOX*/
+.galeria-lightbox {
+  --bg: rgba(0,0,0,0.8);
+  position: fixed;
+  inset: 0;
+  background: var(--bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+
+  opacity: 0;
+  transform: scale(0.95);
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.galeria-lightbox.active {
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: all;
+}
+
+
+/*Imagen ampliada*/
+.galeria-lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+}
+
+/*Botón x para cerrar imagen*/
+.galeria-lightbox .close-btn {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f00d";
+  font-size: 2rem;
+  color: var(--white);
+  cursor: pointer;
+}
+
+.galeria-lightbox .close-btn::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f00d";
+    font-size: 2rem;
+    color: var(--white);
+}
 
 @media (max-width: 1160px) {
     /*TURISMO Y JUVENTUD*/

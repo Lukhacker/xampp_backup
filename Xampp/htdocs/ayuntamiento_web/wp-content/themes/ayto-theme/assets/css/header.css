@@ -31,6 +31,8 @@
     --background: rgb(35, 35, 35);
     --blue: #007BFF;
     --darker-blue: #0056b3;
+    --light-green: #d4edda;
+    --light-red: #f8d7da;
 }
 
 html, body {

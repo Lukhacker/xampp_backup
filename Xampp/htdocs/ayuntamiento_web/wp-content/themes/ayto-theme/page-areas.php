@@ -25,10 +25,10 @@ get_header();
             </div>
             <div class="turismo-column turismo-column2">
                 <div class="turismo-collage">
-                    <div class="turismo-img turismo-img1"></div>
-                    <div class="turismo-img turismo-img2"></div>
-                    <div class="turismo-img turismo-img3"></div>
-                    <div class="turismo-img turismo-img4"></div>
+                    <div class="turismo-img turismo-img1 galeria-item"></div>
+                    <div class="turismo-img turismo-img2 galeria-item"></div>
+                    <div class="turismo-img turismo-img3 galeria-item"></div>
+                    <div class="turismo-img turismo-img4 galeria-item"></div>
                 </div>
             </div>
         </div>
@@ -43,9 +43,9 @@ get_header();
         <div class="juventud-columns">
             <div class="juventud-column juventud-column1">
                 <div class="juventud-collage">
-                    <div class="juventud-img juventud-img1"></div>
-                    <div class="juventud-img juventud-img2"></div>
-                    <div class="juventud-img juventud-img3"></div>
+                    <div class="juventud-img juventud-img1 galeria-item"></div>
+                    <div class="juventud-img juventud-img2 galeria-item"></div>
+                    <div class="juventud-img juventud-img3 galeria-item"></div>
                 </div>
             </div>
             <div class="juventud-column juventud-column2">
@@ -136,9 +136,9 @@ get_header();
             </div>
             <div class="cultura-column cultura-column2">
                 <div class="cultura-collage">
-                    <div class="cultura-img cultura-img1"></div>
-                    <div class="cultura-img cultura-img2"></div>
-                    <div class="cultura-img cultura-img3"></div>
+                    <div class="cultura-img cultura-img1 galeria-item"></div>
+                    <div class="cultura-img cultura-img2 galeria-item"></div>
+                    <div class="cultura-img cultura-img3 galeria-item"></div>
                 </div>
             </div>
         </div>
@@ -191,6 +191,11 @@ get_header();
         </div>
     </div>
 </section>
+
+<div class="galeria-lightbox">
+  <span class="close-btn"></span>
+  <img src="" alt="Ampliación" />
+</div>
 
 <?php
 get_footer();

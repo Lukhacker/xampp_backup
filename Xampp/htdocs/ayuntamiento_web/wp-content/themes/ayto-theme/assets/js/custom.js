@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     const images = document.querySelectorAll('.post-thumbnail');
-    
+    //Para que según la proporción de la imagen, la imagen se ajuste a una proporción vertical u horizontal adecuada
     images.forEach(image => {
         const width = image.naturalWidth;
         const height = image.naturalHeight;

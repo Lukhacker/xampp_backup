@@ -1,4 +1,5 @@
 <?php
+//ESTILOS DE LA WEB
 function cargar_estilos_pagina() {
     //Estilo general para todo el sitio
     wp_enqueue_style('header-styles', get_template_directory_uri() . '/assets/css/header.css');
@@ -25,6 +26,8 @@ function cargar_estilos_pagina() {
 }
 add_action('wp_enqueue_scripts', 'cargar_estilos_pagina');
 
+//TODOS LOS SCRIPTS
+
 function cargar_scripts_personalizados() {
     //Script general para el menú
     wp_enqueue_script(
@@ -45,7 +48,7 @@ function cargar_scripts_personalizados() {
             true
         );
     }
-
+    //Script para el contacto
     if (is_page('contacto')) {
         wp_enqueue_script(
             'contacto-script',
@@ -55,7 +58,7 @@ function cargar_scripts_personalizados() {
             true
         );
     }
-
+    //Script para areas
     if (is_page('areas')) {
         wp_enqueue_script(
             'slider-script',
@@ -68,6 +71,7 @@ function cargar_scripts_personalizados() {
 }
 add_action('wp_enqueue_scripts', 'cargar_scripts_personalizados');
 
+//Script para el lightbox de la página de inicio
 function cargar_lightbox_solo_en_portada() {
     if ( is_front_page() ) {
         wp_enqueue_script(
@@ -78,9 +82,18 @@ function cargar_lightbox_solo_en_portada() {
             true
         );
     }
+
+    if (is_page('areas')) {
+        wp_enqueue_script(
+            'lightbox-script',
+            get_template_directory_uri() . '/assets/js/lightbox.js',
+            array(),
+            null,
+            true
+        );
+    }
 }
 add_action('wp_enqueue_scripts', 'cargar_lightbox_solo_en_portada');
-
 
 //Registro las páginas de la web
 function registrar_paginas_personalizadas() {
@@ -110,13 +123,14 @@ function registrar_paginas_personalizadas() {
 }
 add_action('after_setup_theme', 'registrar_paginas_personalizadas');
 
+//Para las imágenes destacadas de las entradas
 function activar_imagenes_destacadas() {
     add_theme_support('post-thumbnails');
 }
 add_action('after_setup_theme', 'activar_imagenes_destacadas');
 
 
-/*Función para mostrar las ultimas noticias*/
+//Función para mostrar las ultimas noticias en la página de inicio
 function render_ultimas_noticias() {
     $args = array(
         'post_type'      => 'post',
@@ -207,8 +221,7 @@ function obtener_eventos_fecha() {
     }
 }
 
-
-
+//Para cargar el calendario de eventos
 add_action('wp_enqueue_scripts', 'cargar_calendar_js');
 function cargar_calendar_js() {
     wp_enqueue_script(
@@ -226,8 +239,9 @@ function cargar_calendar_js() {
 
 /*FIESTAS*/
 
+//Para mostrar el evento más reciente en la página de áreas
 function mostrar_ultimos_eventos_fiestas() {
-    ob_start(); // Iniciar el buffer de salida
+    ob_start(); //Inicio el buffer de salida
 
     $args = array(
         'post_type' => 'event',
@@ -262,10 +276,11 @@ function mostrar_ultimos_eventos_fiestas() {
         echo '<p>No hay eventos próximos en este momento.</p>';
     endif;
 
-    return ob_get_clean(); // Devolver el contenido del buffer
+    return ob_get_clean(); //Devuelvo el contenido del buffer
 }
 add_shortcode('ultimos_eventos_fiestas', 'mostrar_ultimos_eventos_fiestas');
 
+//Tengo que sobreescribir el css en los eventos, porque sino no se aplican
 function zubia_override_event_css() {
     if ( is_singular('event') ) {
         ?>
@@ -328,6 +343,7 @@ function zubia_override_event_css() {
 }
 add_action('wp_head', 'zubia_override_event_css');
 
+//Para que en vez de poner date en inglés, que ponga fecha en español
 function zubia_custom_event_date_label( $text ) {
     if ( 'Date' === $text ) {
         return 'Fecha';

@@ -1041,7 +1041,7 @@
 @media (max-width: 670px) {
     /*NOTICIAS*/
     .post-thumbnail {
-        aspect-ratio: 4/7;
+        aspect-ratio: 4/8;
     }
 }
 
