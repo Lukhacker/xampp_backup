@@ -6,10 +6,15 @@
         </h1>
         <?php
         $s = get_search_query();
+        $paged = get_query_var('paged') ? get_query_var('paged') : 1;
+
         $args = array(
-            's' => $s, //Palabra clave de la búsqueda
-            'post_type' => array('post', 'page', 'event'), //Buscar en entradas, páginas y eventos
+            's' => $s,
+            'post_type' => array('post', 'page', 'event'),
+            'posts_per_page' => 10,
+            'paged' => $paged,
         );
+
         $query = new WP_Query($args);
         if ($query->have_posts()) {
             while ($query->have_posts()) {
@@ -23,6 +28,17 @@
                 </a>
                 <?php
             }
+
+            //Paginación
+            echo '<div class="search-pagination">';
+            echo paginate_links(array(
+                'total' => $query->max_num_pages,
+                'current' => $paged,
+                'prev_text' => '« Anterior',
+                'next_text' => 'Siguiente »'
+            ));
+            echo '</div>';
+
         } else {
             echo '<p>No se encontraron resultados.</p>';
         }

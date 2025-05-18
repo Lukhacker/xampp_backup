@@ -6,7 +6,6 @@
     justify-content: flex-start;
     align-items: center;
     flex-flow: column nowrap;
-    margin-top: 2rem;
 }
 
 .search-container {
@@ -17,6 +16,7 @@
     justify-content: center;
     align-items: flex-start;
     flex-flow: column nowrap;
+    margin-top: 2rem;
 }
 
 .uppercase {
@@ -85,5 +85,36 @@
 /*Cambio de color en hover*/
 .search-result:hover h2,
 .search-result:hover p {
+    color: var(--white);
+}
+
+.search-pagination {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.search-pagination a,
+.search-pagination span {
+    color: var(--white);
+    font-family: Montserrat, Calibri;
+    text-align: justify;
+    font-size: clamp(1rem, 0.933rem + 0.222vw, 1.2rem);
+    background-color: var(--dark-grey);
+    padding: 8px 14px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.search-pagination a:hover {
+    background-color: var(--scroll-grey);
+}
+
+.search-pagination .current {
+    background-color: var(--blue);
     color: var(--white);
 }

@@ -935,3 +935,54 @@
 13:14:00  [main] 	Deinitializing Modules
 13:14:00  [main] 	Deinitializing Control Panel
 
+11:10:59  [main] 	Initializing Control Panel
+11:10:59  [main] 	Windows Version:  Enterprise  64-bit
+11:10:59  [main] 	XAMPP Version: 8.0.30
+11:10:59  [main] 	Control Panel Version: 3.3.0  [ Compiled: Apr 6th 2021 ]
+11:10:59  [main] 	Running with Administrator rights - good!
+11:10:59  [main] 	XAMPP Installation Directory: "c:\secret\secretsecret\xampp\"
+11:10:59  [main] 	Checking for prerequisites
+11:11:02  [main] 	All prerequisites found
+11:11:02  [main] 	Initializing Modules
+11:11:02  [main] 	Starting Check-Timer
+11:11:02  [main] 	Control Panel Ready
+11:14:38  [Apache] 	Attempting to start Apache app...
+11:14:38  [Apache] 	Status change detected: running
+11:14:39  [mysql] 	Attempting to start MySQL app...
+11:14:41  [mysql] 	Status change detected: running
+12:23:51  [Apache] 	Attempting to stop Apache (PID: 11552)
+12:23:51  [Apache] 	Attempting to stop Apache (PID: 11592)
+12:23:51  [Apache] 	Status change detected: stopped
+12:23:51  [mysql] 	Attempting to stop MySQL app...
+12:23:51  [mysql] 	Status change detected: stopped
+12:25:12  [main] 	Deinitializing Modules
+12:25:12  [main] 	Deinitializing Control Panel
+
+19:53:39  [main] 	Initializing Control Panel
+19:53:39  [main] 	Windows Version:  Enterprise  64-bit
+19:53:39  [main] 	XAMPP Version: 8.0.30
+19:53:39  [main] 	Control Panel Version: 3.3.0  [ Compiled: Apr 6th 2021 ]
+19:53:39  [main] 	Running with Administrator rights - good!
+19:53:39  [main] 	XAMPP Installation Directory: "c:\secret\secretsecret\xampp\"
+19:53:39  [main] 	Checking for prerequisites
+19:53:42  [main] 	All prerequisites found
+19:53:42  [main] 	Initializing Modules
+19:53:42  [main] 	Starting Check-Timer
+19:53:42  [main] 	Control Panel Ready
+20:32:24  [main] 	Deinitializing Modules
+20:32:25  [main] 	Deinitializing Control Panel
+
+16:54:03  [main] 	Initializing Control Panel
+16:54:03  [main] 	Windows Version:  Enterprise  64-bit
+16:54:03  [main] 	XAMPP Version: 8.0.30
+16:54:03  [main] 	Control Panel Version: 3.3.0  [ Compiled: Apr 6th 2021 ]
+16:54:03  [main] 	Running with Administrator rights - good!
+16:54:03  [main] 	XAMPP Installation Directory: "c:\secret\secretsecret\xampp\"
+16:54:03  [main] 	Checking for prerequisites
+16:54:05  [main] 	All prerequisites found
+16:54:05  [main] 	Initializing Modules
+16:54:05  [main] 	Starting Check-Timer
+16:54:05  [main] 	Control Panel Ready
+18:19:31  [main] 	Deinitializing Modules
+18:19:31  [main] 	Deinitializing Control Panel
+

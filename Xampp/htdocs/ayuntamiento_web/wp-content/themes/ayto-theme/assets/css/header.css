@@ -442,6 +442,13 @@ header.hidden {
         z-index: 9999;
         cursor: pointer;
     }
+
+    .menu-toggle:checked + .hamburger {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 99999;
+    }
     
     .list-nav {
         opacity: 0;
