@@ -206,11 +206,11 @@
 }
 
 .juventud-column1 {
-    flex: 6;
+    flex: 5;
 }
 
 .juventud-column2 {
-    flex: 5;
+    flex: 6;
 }
 
 .juventud-text {
@@ -1030,7 +1030,7 @@
 @media (max-width: 950px) {
     /*FIESTAS*/
     .fiestas-columns {
-        flex-flow: column-reverse nowrap;
+        flex-flow: column nowrap;
     }
 }
 

@@ -156,7 +156,6 @@ get_header();
                 <div class="deportes-item deportes-item1">
                     <h2>La Zubia Activa: Muévete, Supera, Disfruta</h2>
                 </div>
-                <span class="vertical-black-line"></span>
                 <div class="deportes-item deportes-item2">
                     <p>
                         El <strong>Área de Deportes</strong> del Ayuntamiento de La Zubia promueve un estilo de vida <strong>activo y saludable</strong>, facilitando el acceso a <strong>instalaciones deportivas</strong> y organizando actividades que fomentan la <strong>participación ciudadana</strong>, la <strong>superación personal</strong> y el <strong>compañerismo</strong>.

@@ -180,48 +180,7 @@ function render_ultimas_noticias() {
     endif;
 }
 
-
-
 //CALENDARIO DE EVENTOS
-
-add_action('wp_ajax_obtener_eventos_fecha', 'obtener_eventos_fecha');
-add_action('wp_ajax_nopriv_obtener_eventos_fecha', 'obtener_eventos_fecha');
-
-function obtener_eventos_fecha() {
-    if (!isset($_POST['fecha'])) {
-        wp_send_json_error('Falta la fecha');
-    }
-
-    $fecha = sanitize_text_field($_POST['fecha']);
-
-    $eventos = eo_get_events(array(
-        'showpastevents' => true,
-        'event_start_after' => $fecha,
-        'event_start_before' => $fecha,
-        'group_events_by' => 'series'
-    ));
-
-    if ($eventos) {
-        ob_start(); //CapturO HTML
-
-        foreach ($eventos as $evento) {
-            ?>
-            <div class="evento" style="opacity: 0; transition: opacity 0.5s;">
-              <h2><?php echo esc_html($evento->post_title); ?></h2>
-              <p><?php echo esc_html($evento->post_excerpt); ?></p>
-              <?php echo get_the_post_thumbnail($evento->ID, 'medium'); ?>
-            </div>
-            <?php
-        }
-
-        $html = ob_get_clean();
-        wp_send_json_success($html);
-    } else {
-        wp_send_json_success('<p>No hay eventos para esta fecha.</p>');
-    }
-}
-
-//Para cargar el calendario de eventos
 add_action('wp_enqueue_scripts', 'cargar_calendar_js');
 function cargar_calendar_js() {
     wp_enqueue_script(
@@ -300,6 +259,7 @@ function zubia_override_event_css() {
                 margin-bottom: 1rem;
                 color: var(--black);
                 padding: 1rem;
+                text-align: center;
             }
 
             .eventorganiser-event-meta ul {
@@ -335,6 +295,22 @@ function zubia_override_event_css() {
                 color: var(--black);
                 font-size: clamp(1rem, 0.933rem + 0.222vw, 1.2rem);
                 margin-bottom: .5rem;
+            }
+
+            time {
+                font-family: Montserrat, Calibri;
+                text-align: justify;
+                color: var(--black);
+                font-size: clamp(1.5rem, 1.333rem + 0.556vw, 2rem);
+                text-align: center;
+            }
+
+            strong {
+                font-family: Montserrat, Calibri;
+                text-align: justify;
+                color: var(--black);
+                font-size: clamp(1.5rem, 1.333rem + 0.556vw, 2rem);
+                text-align: center;
             }
 
         </style>
