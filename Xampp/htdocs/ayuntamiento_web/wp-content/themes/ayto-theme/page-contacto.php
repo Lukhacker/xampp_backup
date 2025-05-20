@@ -122,6 +122,14 @@ get_header();
     </div>
 </section>
 
+<section class="asistente">
+    <div class="asistente-container">
+        <h1>Pregúntale algo a nuestra asistente Belén</h1>
+        <span class="white-line"></span>
+        <?php echo do_shortcode('[wpaicg_chatgpt id=50]'); ?>
+    </div>
+</section>
+
 <section class="formulario">
     <div class="formulario-title">
         <h1>Contáctanos por correo</h1>
@@ -130,11 +138,7 @@ get_header();
     <div class="formulario-container">
         <h1>¿Tienes alguna duda?</h1>
         <span class="contact-line"></span>
-
-        <!--Muestro el mensaje de éxito o error-->
-        <div id="responseMessage"></div>
-
-            <!-- Formulario de contacto -->
+        
             <form id="contact-form">
                 <label for="area">Área de contacto:</label>
                 <select id="area" name="area" required>

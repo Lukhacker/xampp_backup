@@ -1,33 +1,26 @@
-document.getElementById("contact-form").addEventListener("submit", function(event) {
-    event.preventDefault();
+document.getElementById("contact-form").addEventListener("submit", function (e) {
+    e.preventDefault(); // Evita el envío normal
 
-    let formData = new FormData(this);
-    formData.append('ajax', true);
+    const area = document.getElementById("area").value;
+    const nombre = document.getElementById("nombre").value;
+    const email = document.getElementById("email").value;
+    const mensaje = document.getElementById("mensaje").value;
 
-    fetch('contacto.php', {
-        method: 'POST',
-        body: formData
-    })
-    
-    .then(response => response.json())
-    .then(data => {
-        const responseMessage = document.getElementById('responseMessage');
-        responseMessage.classList.remove('success', 'error');
+    //Correos según el área seleccionada
+    const destinatarios = {
+      ayuntamiento: "atencion@ayuntamientolazubia.com",
+      mayores: "mayores@ayuntamientolazubia.com",
+      juventud: "juventud@ayuntamientolazubia.com",
+      cultura: "cultura@ayuntamientolazubia.com"
+    };
 
-        if (data.status === 'success') {
-            responseMessage.classList.add('success');
-        } else {
-            responseMessage.classList.add('error');
-        }
+    const destino = destinatarios[area];
 
-        responseMessage.textContent = data.message;
-        responseMessage.style.display = 'block';
-    })
-    .catch(error => {
-        const responseMessage = document.getElementById('responseMessage');
-        responseMessage.classList.remove('success');
-        responseMessage.classList.add('error');
-        responseMessage.textContent = 'Hubo un error al enviar el mensaje. Intenta nuevamente.';
-        responseMessage.style.display = 'block';
-    });
-});
+    const asunto = encodeURIComponent("Consulta para el área de " + area);
+    const cuerpo = encodeURIComponent(
+      `${mensaje}`
+    );
+
+    //Abre el cliente de correo con los datos
+    window.location.href = `mailto:${destino}?subject=${asunto}&body=${cuerpo}`;
+  });

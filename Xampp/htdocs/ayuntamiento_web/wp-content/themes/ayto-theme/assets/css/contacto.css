@@ -243,7 +243,7 @@
     }
 }
 
-/*Formulario*/
+/*FORMULARIO*/
 
 .formulario {
     width: 100%;
@@ -253,6 +253,7 @@
     align-items: center;
     flex-flow: column nowrap;
     padding-bottom: 2rem;
+    padding-top: 2rem;
 }
 
 .formulario-container {
@@ -332,33 +333,47 @@ label {
     background-color: var(--dark-grey);
 }
 
-#responseMessage {
-    display: none;
-    padding: 1.5rem;
-    text-align: center;
-    font-size: clamp(1rem, 0.933rem + 0.222vw, 1.2rem);
-    color: var(--black);
-    border-radius: 10px;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-}
-
 textarea {
     resize: vertical;
     min-height: 120px;
 }
 
-#responseMessage.success {
-    display: block;
-    background-color: var(--light-green);
-    color: var(--dark-green);
+/*IA*/
+
+.asistente {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+    margin-top: 2rem;
 }
 
-#responseMessage.error {
-    display: block;
-    background-color: var(--light-red);
-    color: var(--dark-red);
+.asistente-container {
+    width: 90%;
+    height: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-flow: column nowrap;
 }
+
+.wpaicg-chat-shortcode {
+    margin: 0 !important;
+    width: 100% !important;
+}
+
+.wpaicg-chat-message, .wpaicg-chat-shortcode-type textarea, .wpaicg-user-message, .wpaicg_chat_additions {
+    font-family: Montserrat, Calibri;
+    text-align: justify;
+    color: var(--white);
+    font-size: clamp(1rem, 0.933rem + 0.222vw, 1.2rem);
+}
+
+
 
 @media (max-width: 550px) {
     .instalaciones-row {
