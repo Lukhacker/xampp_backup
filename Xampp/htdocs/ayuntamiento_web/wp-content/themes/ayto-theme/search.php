@@ -1,4 +1,5 @@
 <?php get_header(); ?>
+
 <section class="search">
     <div class="search-container">
         <h1 class="search-title">
@@ -46,5 +47,6 @@
         ?>
     </div>
 </section>
+
 <?php get_footer(); ?>
 

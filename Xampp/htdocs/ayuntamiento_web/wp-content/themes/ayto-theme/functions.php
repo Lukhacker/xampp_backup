@@ -29,11 +29,38 @@ add_action('wp_enqueue_scripts', 'cargar_estilos_pagina');
 //TODOS LOS SCRIPTS
 
 function cargar_scripts_personalizados() {
+    //Cargar GSAP
+    wp_enqueue_script(
+        'gsap',
+        'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js',
+        array(),
+        '3.12.2',
+        true
+    );
+
+    //Cargar ScrollTrigger
+    wp_enqueue_script(
+        'scrolltrigger',
+        'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js',
+        array('gsap'),
+        '3.12.2',
+        true
+    );
+    
     //Script general para el menú
     wp_enqueue_script(
         'menu-script', 
         get_template_directory_uri() . '/assets/js/menu.js', 
         array(),
+        '1.0',
+        true
+    );
+
+    //Script general para las animaciones al hacer scroll
+    wp_enqueue_script(
+        'animation-script',
+        get_template_directory_uri() . '/assets/js/scroll.js',
+        array('gsap', 'scrolltrigger'),
         '1.0',
         true
     );

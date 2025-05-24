@@ -8,9 +8,9 @@ document.getElementById("contact-form").addEventListener("submit", function (e) 
 
     //Correos según el área seleccionada
     const destinatarios = {
-      ayuntamiento: "atencion@ayuntamientolazubia.com",
+      ayuntamiento: "atencionciudadana@ayuntamientolazubia.com",
       mayores: "mayores@ayuntamientolazubia.com",
-      juventud: "juventud@ayuntamientolazubia.com",
+      juventud: "juventudlazubia@gmail.com",
       cultura: "cultura@ayuntamientolazubia.com"
     };
 
@@ -23,4 +23,4 @@ document.getElementById("contact-form").addEventListener("submit", function (e) 
 
     //Abre el cliente de correo con los datos
     window.location.href = `mailto:${destino}?subject=${asunto}&body=${cuerpo}`;
-  });
+});

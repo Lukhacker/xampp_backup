@@ -94,7 +94,7 @@ get_header();
         </div>
 
         <div class="instalaciones-row">
-            <div class="instalaciones-item instalaciones-item1">
+            <div class="instalaciones-item instalaciones-item3">
                     <div class="map">
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3181.2867276491756!2d-3.5868262244794273!3d37.12209294948899!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd71fb2c454b9f05%3A0xc3b25cd38f8ed377!2sCasa%20de%20La%20Juventud!5e0!3m2!1ses!2ses!4v1743405649412!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
@@ -105,7 +105,7 @@ get_header();
                         <p><i class="fa fa-clock"></i> 10:00 - 20:30</p>
                     </div>
                 </div>
-                <div class="instalaciones-item instalaciones-item2">
+                <div class="instalaciones-item instalaciones-item4">
                     <div class="map">
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3181.63198961683!2d-3.5938677244797765!3d37.11387674995552!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd71fb9a5906567f%3A0x93de826f97b2e962!2sCentro%20Carmen%20Jim%C3%A9nez!5e0!3m2!1ses!2ses!4v1743405701059!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
