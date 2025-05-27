@@ -5,6 +5,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+  
 
 /*Colores y variables*/
 :root {
@@ -40,6 +41,7 @@ html, body {
     height: auto;
     scroll-behavior: smooth;
     background: var(--background);
+    overflow-x: hidden;
 }
 
 .container {

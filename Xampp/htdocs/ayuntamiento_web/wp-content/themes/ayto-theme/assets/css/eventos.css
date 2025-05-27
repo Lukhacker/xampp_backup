@@ -154,6 +154,20 @@
     color: var(--white);
 }
 
+.no-events {
+    width: 80%;
+    height: auto;
+    display: flex;
+    align-self: center;
+    justify-self: center;
+    flex-flow: column nowrap;
+
+    font-family: Montserrat, Calibri;
+    text-align: justify;
+    color: var(--white);
+    font-size: clamp(1rem, 0.933rem + 0.222vw, 1.2rem);
+}
+
 @media (max-width: 780px) {
     .post-thumbnail {
         aspect-ratio: 4/7;

@@ -42,7 +42,7 @@ if ($query->have_posts()) : ?>
     </div>
     <?php wp_reset_postdata();
 else :
-    echo '<p>No hay eventos disponibles.</p>';
+    echo '<p class="no-events">No hay eventos programados</p>';
 endif;
 ?>
 
